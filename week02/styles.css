@@ -1,0 +1,13 @@
+.red {
+    color:red; 
+  }
+  
+  .blue {
+    color:blue;
+  }
+  
+  .yellow-wrapper {
+    background-color: yellow;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
