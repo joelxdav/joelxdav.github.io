@@ -1,0 +1,42 @@
+
+body {
+  padding: 10px 50px;
+    }   
+    
+nav {
+  background-color: #aaaaff;
+  word-spacing: 10px;
+  font-weight: 400;
+  font-family: sans-serif;
+  width: 100vw;
+  padding: 5px;
+  position:fixed;
+  top:0px;
+  left:0px;
+}
+nav a { text-decoration:none; }
+nav a:hover { 
+  color: white;
+}
+
+
+h1, h3 {
+    text-align:center;
+    }
+
+
+
+
+.red {
+    color:red; 
+  }
+
+.blue {
+  color:blue;
+}
+
+.yellow-wrapper {
+  background-color: yellow;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
