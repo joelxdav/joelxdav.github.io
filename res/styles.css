@@ -1,8 +1,10 @@
 
 body {
-  padding: 10px 50px;
+  padding: 0px;
+  margin-top: 50px;
     }   
-    
+  
+
 nav {
   background-color: #aaaaff;
   word-spacing: 10px;
@@ -23,8 +25,6 @@ nav a:hover {
 h1, h3 {
     text-align:center;
     }
-
-
 
 
 .red {
