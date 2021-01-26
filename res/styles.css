@@ -4,6 +4,9 @@ body {
   margin-top: 50px;
     }   
   
+header { 
+  margin-bottom: 10px; 
+}
 
 nav {
   background-color: #aaaaff;
@@ -21,11 +24,9 @@ nav a:hover {
   color: white;
 }
 
-
 h1, h3 {
     text-align:center;
     }
-
 
 .red {
     color:red; 
