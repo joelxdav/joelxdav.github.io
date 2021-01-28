@@ -12,7 +12,7 @@ nav {
   background-color: #575757;
   color: #fff;
   word-spacing: 10px;
-  font-weight: 400;
+  font-weight: 900;
   font-family: sans-serif;
   width: 99vw;
   min-width: 400px;
@@ -35,8 +35,6 @@ nav a:hover {
 .sub-nav {
   background-color: #dfdfdf;
   color: #fff;
-  /* word-spacing: 10px; */
-  font-weight: 400;
   font-family: sans-serif;
   border: 0px solid #353535;
   border-top: none;
