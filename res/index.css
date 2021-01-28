@@ -57,6 +57,18 @@ body {
   padding: 10px;
 }
 
+#content a {
+  color: #4a5191;
+  font-weight: bold;
+
+  transition: .5s;
+}
+
+#content a:hover {
+  background-color: #FFE597;
+  padding-right: 25px;
+}
+
 h1 {
   color: #11152e;
 }
@@ -75,14 +87,3 @@ ul {
   list-style-type: square;
 }
 
-body a {
-  color: #4a5191;
-  font-weight: bold;
-
-  transition: .5s;
-}
-
-body a:hover {
-  background-color: #FFE597;
-  padding-right: 25px;
-}
