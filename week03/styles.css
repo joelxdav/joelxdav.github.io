@@ -1,7 +1,6 @@
 @charset "utf-8";
 /* CSS Document */
 
-
 body {
   font-family: "Georgia", serif;
   color: #000;
@@ -18,7 +17,7 @@ header h1 {
   color: #7C1A00;
   padding: 40px 40px 40px 120px;
   background-image: url("header-image-1.gif");
-  background-attachment: fixed;
+  background-repeat: no-repeat;
   background-position: top left;
 }
 
@@ -48,12 +47,17 @@ nav a {
   color: #FFF;
   background-color: #8C9273;
   padding: 3px; 
-  padding-right: 60px;
+  /*padding-right: 60px;*/
+  min-width: 100px;
+  display: inline-block;
   text-decoration: none;
+
+  transition: .5s;
 }
 
 nav a:hover {
   background-color: #7C1A00;
+  padding-right: 25px;
 }
 
 #content {
@@ -105,3 +109,4 @@ a {
 a:hover {
   background-color: #FFE597;
 }
+
