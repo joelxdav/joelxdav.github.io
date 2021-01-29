@@ -7,12 +7,12 @@
   }
   
   nav {
-    background-color: #575757;
+    background-color: #465a85;
     color: #fff;
     word-spacing: 10px;
-    font-weight: 400;
+    font-weight: 900;
     font-family: sans-serif;
-    width: 100vw;
+    width: 99vw;
     min-width: 400px;
     height: 30px;
     padding: 15px 5px 5px 15px;
@@ -23,6 +23,7 @@
   }
   nav a { 
     color: #fff; 
+    font-weight: bold;
     text-decoration:none; 
   }
   nav a:hover { 
