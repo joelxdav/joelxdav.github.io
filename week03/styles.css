@@ -21,7 +21,7 @@ header h1 {
   background-position: top left;
 }
 
-#container {
+section #container {
   margin-bottom: 30px;
 }
 
@@ -60,7 +60,7 @@ nav a:hover {
   padding-right: 25px;
 }
 
-#content {
+article #content {
   background-image: url("trans-bg.gif");
   border: 1px solid #CCC;
   margin-left: 180px;
