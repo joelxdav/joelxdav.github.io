@@ -88,9 +88,14 @@ nav a:hover {
   height: 30px;
   padding: 15px 5px 5px 15px;
   position:fixed;
-  top:130px;
+  top:0px;
   left:0px;
   margin: auto;
+}
+
+main {
+  position: fixed;
+  top: 130px;
 }
 
 .red {
