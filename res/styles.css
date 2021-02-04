@@ -3,7 +3,7 @@ body {
   padding: 0px;
   margin-top: 130px;
     }   
-  
+/*
 header { 
   margin-bottom: 10px; 
 }
@@ -30,7 +30,52 @@ nav a {
 nav a:hover { 
   color: #FFE597;
 }
+*/
 
+
+
+header {
+  background-color: #fff;
+  color: #6d6e6e;
+  font-size: 14px;
+  font-weight: 300;
+  font-family: sans-serif;
+  border-top: 20px solid #dfefef;
+  min-width: 1000px;
+  width: 100vw;
+  height: 110px;
+  padding: 0px;
+  margin: 0px;
+  margin-bottom: 30px;
+  position:fixed;
+  top:0px;
+  left:0px;
+  z-index: 100;
+}
+header img {
+  background-color: white;
+  width: 300px;
+  height: 100px;
+  margin: 0px 30px;
+  float: left;
+  display: inline;
+}
+nav {
+  width: auto;
+  height: auto;
+  padding: 0px 0px 0px 15px;
+  margin: auto;
+  margin-top: 42px;
+  display: inline-block;
+}
+nav a { 
+  color: inherit;
+  text-decoration: none;
+  margin: 10px;
+}
+nav a:hover { 
+  color: #FFE597;
+}
 .sub-nav {
   background-color: #dfdfdf;
   color: #fff;
