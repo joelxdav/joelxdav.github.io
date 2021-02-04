@@ -113,6 +113,7 @@ section {
   background-color: #fff;
   min-width: 400px;
   width: 70vw;
+  min-height: 100vh;
   height: auto;
   padding: 20px 5vw;
   margin: 0px;
