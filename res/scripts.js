@@ -5,7 +5,7 @@ $(document).ready(function() {
     $('header').load("/res/header.html");
 
     // import sidebar 
-    $('#sidebar').load("/res/sidebar.html");
+  //  $('#sidebar').load("/res/sidebar.html");
 
     // import footer
     $('footer').load("/res/footer.html");
