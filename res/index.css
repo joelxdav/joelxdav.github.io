@@ -44,7 +44,7 @@ header img {
 nav {
   width: auto;
   height: auto;
-  padding: 0px;
+  padding: 0px 0px 0px 15px;
   margin: auto;
   margin-top: 42px;
   display: inline-block;
@@ -113,7 +113,7 @@ section {
   background-color: #fff;
   min-width: 400px;
   width: 70vw;
-  min-height: 100vh;
+  min-height: 70vh;
   height: auto;
   padding: 20px 5vw;
   margin: 0px;
