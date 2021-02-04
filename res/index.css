@@ -7,7 +7,7 @@
   }
   
   nav {
-    background-color: #465a85;
+    background-color: #314046;
     color: #fff;
     /* word-spacing: 10px; */
     font-weight: 900;
@@ -20,6 +20,7 @@
     top:0px;
     left:0px;
     margin: auto;
+    margin-bottom: 20px;
   }
   nav a { 
     color: #fff; 
@@ -43,12 +44,12 @@ body {
   color: #000;
   line-height: 1.4em;
   background-image: url("../week03/trans-bg.gif");
-  background-color: #04114d;
+  background-color: #262831;
 }
 
 #content {
   background-image: url("../week03/trans-bg.gif");
-  background-color: #becfe9;
+  background-color: #a7a9ac;
   border: 1px solid #CCC;
   border-radius: 10px 0px 0px 10px;
   margin: auto;
@@ -61,7 +62,7 @@ body {
 }
 
 #content a {
-  color: #4a5191;
+  color: #272c38;
   font-weight: bold;
 
   transition: .5s;
