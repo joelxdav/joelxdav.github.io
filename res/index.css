@@ -22,6 +22,7 @@ header {
   font-weight: 300;
   font-family: sans-serif;
   border-top: 20px solid #dfefef;
+  border-bottom: 1px solid #f8f8f8;
   min-width: 1000px;
   width: 100vw;
   height: 110px;
