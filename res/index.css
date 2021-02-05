@@ -120,6 +120,7 @@ section {
   position: absolute;
   top: 130px;
   left: 20vw;
+  bottom: 0px;
 }
 
 #content a {
