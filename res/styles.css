@@ -3,15 +3,14 @@
 
   
 body {
-  background-color: #f8f8f8;
+  background-color: #f5f5f5;
   background-image: url("../week03/trans-bg.gif");
   font-family: "Georgia", serif;
   color: #000;
   line-height: 1.4em;
   min-width: 1000px;
-  min-height: 100%;
+  min-height: auto;
   margin: 0px;
-  margin-top: 130px;
   overflow-x: hidden;
 }
 header {
@@ -20,7 +19,7 @@ header {
   font-size: 14px;
   font-weight: 300;
   font-family: sans-serif;
-  border-top: 20px solid #dfefef;
+  border-top: 20px solid #eef4f4;
   border-bottom: 1px solid #f8f8f8;
   min-width: 1000px;
   width: 100vw;
@@ -66,6 +65,7 @@ nav a:hover {
 main {
   background-color: transparent;
   min-width: 1000px;
+  margin-top: 130px;
   margin-bottom: 0px;
   overflow-y: scroll;
 }
@@ -116,14 +116,13 @@ section {
   top: 0px;
   left: 20vw;
 }
-
 #content blockquote {
   background-color: #fff;
   min-width: 400px;
   width: 70vw;
   min-height: 50vh;
   height: auto;
-  padding: 20px 5vw;
+  padding: 20px 5vw 75px 5vw;
   margin: 0px;
   position: relative;
   top: 0px;
@@ -149,7 +148,7 @@ h1 {
 }
 
 h5 {
-  background-color: #dfefef;
+  background-color: #eef4f4;
   font-family: sans-serif;
   max-width:100px;
   padding: 5px;
