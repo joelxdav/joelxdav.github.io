@@ -113,10 +113,11 @@ section {
   background-color: #fff;
   min-width: 400px;
   width: 70vw;
-  min-height: 60vh;
+  min-height: 50vh;
   height: auto;
   padding: 20px 5vw;
   margin: 0px;
+  margin-bottom: 240px;
   position: absolute;
   top: 130px;
   left: 20vw;
