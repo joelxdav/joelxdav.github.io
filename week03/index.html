@@ -2,53 +2,18 @@
 <html lang="en-US">
 <head>
   <meta charset="UTF-8">
-  <title>Week 3</title>
-  <link rel="stylesheet" type="text/css" href="/res/index.css"> 
-  <link rel="icon" href="/res/icon.gif" type="image/jpg" sizes="16x16">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="/res/scripts.js"></script>
+  <title>3</title>
+  <script>
+
+    var week = parseInt(document.title);
+    
+    location.replace("/index.html?week="+week);
+
+    document.getElementById("link").innerHTML = 'If this page does not redirect, click here: <a href="/index.html?week='+week+'">Week '+week+'</a>';
   
+  </script>
 </head>
 <body>
-  <span id="top"></span>
-  <header></header>
-
-  <main>
-    <aside id="sidebar">
-      <h5>Assignments by Week</h5>
-      
-      <a href="/week01/">Week 1</a>
-      
-      <a href="/week02/">Week 2</a>
-      
-      <a href="/week03/">Week 3</a>
-      
-      <a href="/week04/">Week 4</a>
-      
-      <a href="/week05/">Week 5</a>
-      
-      <a href="/week06/">Week 6</a>
-      
-      <a href="/week07/">Week 7</a>
-      
-      <a href="/week08/">Week 8</a>
-          </aside>  
-    
-    <div id="content">
-    
-      <h3>Completed Assignments</h3>
-
-      <h5>Week 3</h5>
-      <ul>
-        <li><a href="css-designer.html">3.1 - CSS Designer</a></li>
-      </ul>
-
-
-      <br><br>
-      
-    <footer></footer>
-    </div><!--content-->
-
-  </main>
+  <p id="link"></p>
 </body>
 </html>

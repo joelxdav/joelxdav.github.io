@@ -64,9 +64,10 @@ nav a:hover {
 }
 
 main {
+  background-color: transparent;
   min-width: 1000px;
-  min-height: 100%;
   margin-bottom: 0px;
+  overflow-y: scroll;
 }
 aside {
   background-color: transparent;
@@ -102,14 +103,15 @@ section {
   background-size: cover;
   min-width: 400px;
   width: 70vw;
-  height: 350px;
+  height: auto;
   padding: 20px 5vw;
-  position: absolute;
-  top: 130px;
+  margin: 0px;
+  position: relative;
+  top: 0px;
   left: 20vw;
 }
 
-#content {
+#content blockquote {
   background-color: #fff;
   min-width: 400px;
   width: 70vw;
@@ -117,14 +119,13 @@ section {
   height: auto;
   padding: 20px 5vw;
   margin: 0px;
-  margin-bottom: 240px;
-  position: absolute;
-  top: 130px;
+  position: relative;
+  top: 0px;
   left: 20vw;
-  bottom: 0px;
+  display: block;
 }
 
-#content a {
+#content a, footer a {
   font-family: sans-serif;
   font-weight: 100;
   color: #6d6e6e;
@@ -164,9 +165,9 @@ footer {
   width: 90vw;
   height: 200px;
   padding: 20px 5vw;
-  position: absolute;
-  left: -20vw;
-  bottom: -240px;
+  position: relative;
+  left: 0px;
+  bottom: 0px;
 }
 footer table, footer tr {
   width: 90%;
