@@ -15,8 +15,12 @@ $(document).ready(function() {
   var week = 0;
       week = parseInt(urlParams.get('week'));
 
+  
+  
+  
 
   // display "week" specific content in "content" div
+  
   function loadWeeklyContent(week) {
     week_content = [
       "", // null
@@ -35,8 +39,12 @@ $(document).ready(function() {
     document.getElementById("assignments-list").innerHTML = week_content[week];
   }
 
+  
+  
 
+  
   // populate content area when sidebar buttons are clicked..."w" is for week number
+  
   $(".weeks").click(function(){
     var w = this.name;
     $('#content').html('<blockquote><h3>Assignments</h3><h5 id="week-h5"></h5><ul id="assignments-list"></ul><br><br></blockquote>');
@@ -44,8 +52,11 @@ $(document).ready(function() {
   })
 
 
+  
+  
 
   // check to see if parameters are valid, then populate content
+  
   if (week > 0) {
     $('#content').html('<blockquote><h3>Assignments</h3><h5 id="week-h5"></h5><ul id="assignments-list"></ul><br><br></blockquote>');
     loadWeeklyContent(week);
@@ -53,20 +64,6 @@ $(document).ready(function() {
 
 
 
-// export functions 
-module.exports = { populateContent, loadWeeklyContent };
-
-/******************* NEW MODULE ****************************
-
-  load header, sidebar, and footer html content
-
-*/
-
-  //$('header').load("/res/header.html");
-  //$('#sidebar').load("/res/sidebar.html");
-  //$('footer').load("/res/footer.html");
- 
-  // now that the index is just one page, loading these from one source doesn't reduce any work
 
 
 });
