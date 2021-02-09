@@ -21,7 +21,7 @@ $(document).ready(function() {
     week_content = [
       "", // null
       '<li><a href="">1.3 - Create Your First HTML Page</a> <i>(the home page)</i></li><li><a href="https://github.com/joelxdav/joelxdav.github.io" target="_blank">1.4 - Files And Directories</a> <i>(github repository)</i></li><li><a href="week01/in-the-beginning.html">1.5 - Using HTML To Structure Text</a></li>',
-      '<li><a href="week01/coding101.html">2.2 - A Very Basic HTML Page</a></li><li><a href="week02/HTML-images.html">2.3 - HTML Images</a></li>',
+      '<li><a href="week02/coding101.html">2.2 - A Very Basic HTML Page</a></li><li><a href="week02/HTML-images.html">2.3 - HTML Images</a></li>',
       '<li><a href="week03/css-designer.html">3.1 - CSS Designer</a></li>',
       '<li><a href="week04/birds.html">4.1 Structuring a Page of Content</a></li><li><a href="week04/cookieandkate.html">4.2 CSS, Composition and Layouts</a></li>',
       '<li><a href="">5.1</a></li>',
