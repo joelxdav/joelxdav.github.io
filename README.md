@@ -30,4 +30,10 @@
   <li><a href="https://joelxdav.github.io/week04/birds.html">4.1 Structuring a Page of Content</a></li>
   <li><a href="https://joelxdav.github.io/week04/cookieandkate.html">4.2 CSS, Composition and Layouts</a></li>
 </ul>
+
+<h5>Week 5</h5>
+<ul>
+  <li><a href="https://wireframe.cc/Kfl4j5" target="_blank">5.1 - Wireframing (pt.1)</a></li>
+  <li><a href="https://wireframe.cc/bfUmBQ" target="_blank">5.1 - Wireframing (pt.2)</a></li>
+</ul>
   </blockquote>
