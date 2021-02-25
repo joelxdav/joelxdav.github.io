@@ -37,6 +37,7 @@ $(document).ready(function() {
     document.title = "Week " + week;
     document.getElementById("week-h5").innerHTML = "Week " + week;
     document.getElementById("assignments-list").innerHTML = week_content[week];
+    history.pushState(null, null, '?week=' + week);
   }
 
   
