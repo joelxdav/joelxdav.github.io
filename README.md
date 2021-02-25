@@ -36,4 +36,10 @@
   <li><a href="https://wireframe.cc/Kfl4j5" target="_blank">5.1 - Wireframing (pt.1)</a></li>
   <li><a href="https://wireframe.cc/bfUmBQ" target="_blank">5.1 - Wireframing (pt.2)</a></li>
 </ul>
+
+<h5>Week 6</h5>
+<ul>
+  <li><a href="https://joelxdav.github.io/frameworks/bootstrap/index.html" target="_blank">6.1 - Create your own Bootstrap site</a></li>
+</ul>
+
   </blockquote>
