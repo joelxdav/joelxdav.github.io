@@ -42,4 +42,10 @@
   <li><a href="https://joelxdav.github.io/frameworks/bootstrap/index.html" target="_blank">6.1 - Create your own Bootstrap site</a></li>
 </ul>
 
+<h5>Week 7</h5>
+<ul>
+  <li><a href="https://codepen.io/joelxdav/pen/RwoyGBY" target="_blank">7.1 - "Hello World!"</a> (Codepen)</li>
+  <li><a href="https://codepen.io/joelxdav/pen/zYojKXd" target="_blank">7.2 - Variable name</a> (Codepen)</li>
+</ul>
+
   </blockquote>
