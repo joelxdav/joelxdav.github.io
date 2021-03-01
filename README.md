@@ -45,7 +45,7 @@
 <h5>Week 7</h5>
 <ul>
   <li><a href="https://codepen.io/joelxdav/pen/RwoyGBY" target="_blank">7.1 - "Hello World!"</a> <i>(Codepen)</i></li>
-  <li><a href="https://codepen.io/joelxdav/pen/zYojKXd" target="_blank">7.2 - Variable name</a> <i>(Codepen)</i></li>
+  <li><a href="https://codepen.io/joelxdav/pen/zYojKXd?editors=1111" target="_blank">7.2 - Variable name</a> <i>(Codepen)</i></li>
 </ul>
 
   </blockquote>
