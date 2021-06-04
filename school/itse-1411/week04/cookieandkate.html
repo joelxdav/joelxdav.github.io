@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<!--
+     Name: Joel Davenport
+     Date: Feb 3rd, 2021
+     Section: ITSE-1411
+     Assignment: 4.2 CSS, Composition and Layouts 
+
+     This is a simple webpage using various HTML elements and CSS styles for design.
+-->
+
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <!--link rel="stylesheet" href="styles.css"-->
+    <link rel="icon" href="icon.gif" type="image/gif" sizes="16x16">
+    <title>Tortilla Pizzas</title>
+    <style>
+      body {
+        background-color: white;
+        min-width: 600px;
+        max-width: 100vw;
+        padding: 0px;
+        margin: 0px;
+        overflow-x: hidden;
+      }
+      header {
+        background-color: antiquewhite;
+        border-radius: 0px;
+        text-align: center;
+        width: 100vw;
+        padding: 10px 0px;
+        margin: 0px 0px 30px 0px;
+      }
+      h1 {
+        font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-size: 50px;
+        font-weight: 300;
+        text-shadow: none;
+      }
+      h3 {
+        color: rgb(68, 104, 78);
+        font-size: 20px;
+        font-weight: 100;
+        letter-spacing: 5px;
+      }
+      h4 {
+        border-bottom: 1px dotted darkgoldenrod;
+        width: 100%;
+      } 
+      img {
+        border-radius: 0px 0px 10px 10px;
+        width: auto;
+      } 
+      main {
+        background-color: transparent;
+        font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-weight: 100;
+        letter-spacing: 2px;
+        border: 1px dotted burlywood;
+        padding: 15px;
+        border-radius: 20px;
+        font-size: 18px;
+        min-width: 750px;
+        width: 75vw;
+        max-width: 1000px;
+        margin: auto;
+        display: flex;
+      } 
+      #wrapper {
+        background-color: transparent;
+        padding: 10px;
+      } 
+      aside {
+        background-color: transparent;
+        border: 1px dotted rgb(68, 104, 78);
+        border-top: none;
+        border-left: none;
+        border-bottom: none;
+        border-radius: 20px 0px 0px 20px;
+        width: auto;
+        padding: 10px;
+        flex: 4;
+      } 
+      footer a {
+        color: rgb(68, 104, 78);
+        text-decoration: none;
+      } 
+      footer a:hover {
+        opacity: 0.7;
+        text-decoration: underline;
+      } 
+      footer table, footer tr {
+        width: 90%;
+        margin: auto;
+      } 
+      footer td {
+        background-color: transparent;
+        padding: 20px;
+      }  
+      footer td:first-child {
+        border-right: 1px dotted rgb(68, 104, 78);
+      }
+      footer {
+        background-color: antiquewhite;
+        font-size: 15px;
+        text-align: left;
+        min-width: 850px;
+        width: 100vw;
+        height: 200px;
+        padding: 50px 0px;
+        margin-top: 30px;
+      } 
+
+      img:hover{opacity: 0.8; cursor:help; transition: 0.3s;}
+      #one:hover{background-color: rgb(238, 208, 198); transition: 0.3s;}
+      #two:hover{background-color: rgb(238, 208, 198); transition: 0.3s;}
+      #three:hover{background-color: rgb(238, 208, 198); transition: 0.3s;}
+      #four:hover{background-color: rgb(238, 208, 198); transition: 0.3s;}
+
+    </style>
+  </head>
+  <body>
+    <span id="top"></span>
+    <header>
+      <h1>Tortilla Pizzas</h1>
+      <h3>Author: Cookie and Kate</h3>
+    </header>
+
+    <main>
+      <aside>
+        <p>This is a simple Tortilla Pizza recipe that was originally posted to <i>cookieandkate.com</i>.</p>
+        <img src="tortilla-pizza.jpg" title="this is a gourmet pizza with jalapenos and pineapples." alt="this is a gourmet pizza with jalapenos and pineapples."/>
+      </aside>
+      <section id="wrapper">  
+        <h4>Ingredients</h4>
+        <article id="one">
+        1 whole wheat tortilla (or whole wheat pita bread)
+        1/4 cup sauce (marinara, pesto, olive oil and garlic, barbecue sauce)
+        1/3 cup or less shredded/crumbled cheese (mozzarella, cheddar, goat, feta)
+        Toppings (go wild!)
+        </article>
+
+        <h4>Instructions</h4>
+        <article id="two">
+        Preheat the oven to 425 degrees Fahrenheit.
+        Place the tortilla in a 12-inch cast iron pan (see notes on baking surfaces below). Spread sauce evenly across the tortilla, leaving 1/2 inch around the edges. Sprinkle with cheese and toppings.
+        Bake for 12-14 minutes, until the cheese is golden and bubbling (no sooner!) and the edges of the tortilla are lightly browned. Slice and serve.
+        </article>
+
+        <h4>Notes</h4>
+        <article id="three">
+        If you don’t have a cast iron skillet I highly recommend getting one, but you can use an oven-safe baking rack or bake it directly on the rack of your toaster oven instead. Bake at 400 degrees for 8 to 11 minutes. Do not use a regular baking sheet because the bottom of the tortilla will not get crispy, your cheese will slide right off and you’ll wish you ordered out.
+
+        Although I have not tried it personally, Kim tried making tortilla pizzas in her cast iron skillet on a gas grill and said they turned out great!
+        Make sure to check the ingredients list on the whole wheat tortillas. It should list about 5 ingredients, not 25. I buy mine at health food stores and store them in the fridge or freezer and they almost never go bad.
+        </article>
+
+        <h4>Topping ideas:</h4>
+        <article id="four">
+        As shown: barbecue sauce (trust me), fresh mozzarella and sharp cheddar cheese, chopped red onion, sliced fresh jalapeño, fresh or defrosted frozen pineapple (canned pineapple is not as good).
+        Basil pesto, feta, fresh or roasted bell peppers (jarred is fine), sliced kalamata olives, chopped red onion, sliced cherry tomatoes.
+        Arugula pesto, basil pesto or light marinara sauce, mozzarella (optional), fresh arugula and parmesan shavings added after baking (like this).
+        Red pepper pesto and goat cheese.
+        Anything you want!
+        </article>
+
+      </section>
+    </main>
+
+    <footer>
+      <table>
+
+        <tr>
+          <td>  
+            Tortilla Pizzas<br><br>
+            &copy; 2021<br><br>
+            Author: Cookie &amp; Kate<br><br>
+            <i>Photo and recipe courtesy of cookieandkate.com</i>
+          </td>
+
+          <td>
+            <a href="/week01/">Week 1</a><br><br>
+            <a href="/week02/">Week 2</a><br><br>
+            <a href="/week03/">Week 3</a><br><br>
+            <a href="/week04/">Week 4</a>
+          </td>
+
+          <td>
+            <a href="/week05/">Week 5</a><br><br>
+            <a href="/week06/">Week 6</a><br><br>
+            <a href="/week07/">Week 7</a><br><br>
+            <a href="/week08/">Week 8</a>
+          </td>
+
+          <td>
+            <a href="/index.html">ITSE-1411 Home</a><br><br>
+            <a href="https://github.com/joelxdav/joelxdav.github.io" target="_blank">ITSE-1411 Repository</a><br><br>
+            <a href="https://codepen.io/collection/AYbQbJ" target="_blank">ITSE-1411 Codepen</a><br><br>
+            <a href="#">^ Top</a>
+          </td>
+        </tr>
+
+      </table>
+    </footer>
+  </body>
+</html>
