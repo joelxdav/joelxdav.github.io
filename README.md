@@ -10,7 +10,7 @@
 
   <h5>Projects</h5>
   <ul>
-    <li><a href="projects/fpmdashboard">FPM Dashboard</li>
+      <li><a href="projects/fpmdashboard">FPM Dashboard</a></li>
   </ul>
 
   <h5>Schoolwork</h5>
