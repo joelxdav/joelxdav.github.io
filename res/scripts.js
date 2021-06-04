@@ -64,7 +64,10 @@ $(document).ready(function() {
   }
 
 
+  // load README.md content into index page "content" div
 
-
+  $.get("README.md", function(response) {
+    $('#content').html(response);
+  })
 
 });
