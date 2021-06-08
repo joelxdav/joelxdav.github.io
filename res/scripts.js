@@ -1,11 +1,8 @@
 
 $(document).ready(function() {
 
-  /* ****************** NEW MODULE ****************************
 
-    1. get page parameters
-
-  */
+  // get page parameters *** not currently used ***
   const queryString = window.location.search;
   console.log(queryString); // ?week=1&...
   const urlParams = new URLSearchParams(queryString);
@@ -17,17 +14,17 @@ $(document).ready(function() {
   // load global <header> & <footer> into <body>
   $.get("/res/header.html", function(response) {
     $('header').html(response);
-  })
+  });
 
   $.get("/res/footer.html", function(response) {
     $('footer').html(response);
-  })
+  });
 
 
   // load local README.md content into index page "content" div
   $.get("README.md", function(response) {
     $('#content').html(response);
-  })
+  });
 
 
 
@@ -37,7 +34,5 @@ $(document).ready(function() {
       pn = pn.replace(/(.*)joelxdav.github.io/,'');
       if (pn == '') {pn = 'Main';}
       $('#path').html(pn);
-
-      alert(pn +"\n"+ path);
 
 });

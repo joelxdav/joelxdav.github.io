@@ -166,6 +166,12 @@ ul {
   list-style-type: square;
 }
 
+.inline-class {
+  padding:0px;
+  margin:none;
+  display:inline;
+  }
+
 footer {
   background-image: url("../week03/trans-bg.gif");
   background-color: #fff;
