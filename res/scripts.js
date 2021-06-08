@@ -16,11 +16,11 @@ $(document).ready(function() {
   
   // load global <header> & <footer> into <body>
   $.get("/res/header.html", function(response) {
-    $('#header').html(response);
+    $('header').html(response);
   })
 
   $.get("/res/footer.html", function(response) {
-    $('#footer').html(response);
+    $('footer').html(response);
   })
 
 
