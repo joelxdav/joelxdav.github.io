@@ -31,13 +31,13 @@ $(document).ready(function() {
 
 
 
+  // get pathname and display in footer
+  var path = window.location.pathname;
+  var pn = path.replace('/index.html','');
+      pn = pn.replace(/(.*)joelxdav.github.io/,'');
+      if (pn == '') {pn = 'Main';}
+      $('#path').html(pn);
 
-var path = window.location.pathname;
-    path = path.replace('/index.html','');
-    path = path.replace(/(.*)joelxdav.github.io/,'');
-    if (path == '') {path = 'Main';}
-    $('#path').html(path);
-
-    //alert(path);
+      alert(pn +"\n"+ path);
 
 });
