@@ -10,12 +10,12 @@
 
   <h5>Projects</h5>
   <ul>
-      <li><a href="projects/fpmdashboard">FPM Dashboard</a></li>
+      <li><a href="projects/fpmdashboard">REP Dashboard</a></li>
   </ul>
 
   <h5>Schoolwork</h5>
   <ul>
-    <li><a href="school/itse-1411">Beginning Web Programming <i>(ITSE-1411)</i></li>
+    <li><a href="school/itse-1411">Beginning Web Programming <i>(ITSE-1411)</i></a></li>
   </ul>
 
 </blockquote>

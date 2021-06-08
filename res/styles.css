@@ -4,12 +4,12 @@
   
 body {
   background-color: #f5f5f5;
-  background-image: url("../week03/trans-bg.gif");
   font-family: "Georgia", serif;
   color: #000;
   line-height: 1.4em;
-  min-width: 1000px;
+  min-width: 600px;
   min-height: auto;
+  padding: 0px;
   margin: 0px;
   overflow-x: hidden;
 }
@@ -64,10 +64,12 @@ nav a:hover {
 
 main {
   background-color: transparent;
-  min-width: 1000px;
+  min-width: inherit;
+  padding: 0px;
   margin-top: 130px;
   margin-bottom: 0px;
   overflow-y: scroll;
+  overflow-x: hidden;
 }
 aside {
   background-color: transparent;
@@ -167,11 +169,11 @@ footer {
   background-image: url("../week03/trans-bg.gif");
   background-color: #fff;
   border-top: 1px solid #dfdfdf;
-  width: 90vw;
+  min-width: 90vw;
   height: 200px;
   padding: 20px 5vw;
   position: relative;
-  left: 0px;
+  left: 0vw;
   bottom: 0px;
 }
 footer table, footer tr {
