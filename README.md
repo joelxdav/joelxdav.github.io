@@ -1,7 +1,7 @@
 <section>
 <h1>Welcome</h1>
 <p>
-    This is my github repository for code that I've written.
+    This repository contains.
 </p>
 </section>
 

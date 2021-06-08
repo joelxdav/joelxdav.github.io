@@ -106,31 +106,32 @@ aside button:active {
 }
 section {
   background-color: transparent;
-  background-image: url("books-banner.jpg");
+  background-image: none;
   background-repeat: no-repeat;
   background-size: cover;
   min-width: 400px;
-  width: 70vw;
+      width: 88vw;
+  max-width: 90vw;
   height: auto;
   padding: 20px 5vw;
   margin: 0px;
   position: relative;
   top: 0px;
-  left: 20vw;
-}
+  left: 0px;
+  }
 #content blockquote {
-  background-color: #fff;
+  background-color: transparent;
   min-width: 400px;
-  width: 70vw;
+  width: 90vw;
   min-height: 50vh;
   height: auto;
   padding: 20px 5vw 75px 5vw;
   margin: 0px;
   position: relative;
   top: 0px;
-  left: 20vw;
+  left: 0vw;
   display: block;
-}
+  }
 
 #content a, footer a {
   font-family: sans-serif;
