@@ -72,34 +72,29 @@ main {
   overflow-x: hidden;
 }
 aside {
-  background-color: transparent;
-  padding: 0px;
+  background-color: rgb(248, 243, 202);
   min-width: 100px;
-  width: 17vw;
-  height: 100vh;
-  padding: 30px 0px 0px 3vw;
-  position: fixed;
-  top: 130px;
-  left: 0px;
+  width: auto;
+  height: 46px;
+  padding: 30px 0px 0px 75px;
 }
 aside a, aside button { 
   background-color: transparent;
   color: #6d6e6e;
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 300;
   font-family: sans-serif; 
   text-decoration: none;
   border: none;
-  width: 80px;
+  width: auto;
   margin: 15px 0px;
-  display: block;
+  cursor: pointer;
   
   transition: .3s;
 }
 aside a:hover, aside button:hover { 
   background-color: #dfefef;
-  width: 120px;
-  cursor: pointer;
+  width: 220px;
 }
 aside button:active {
   background-color: #fff;
