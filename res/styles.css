@@ -114,7 +114,7 @@ section {
   top: 0px;
   left: 0px;
   }
-#content blockquote {
+#content {
   background-color: transparent;
   min-width: 400px;
   width: 90vw;
