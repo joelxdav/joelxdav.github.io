@@ -5,16 +5,18 @@
 </p>
 </section>
 
-<hr/><br>
+<section>
+  <hr/><br>
 
-<h3>Folders</h3>
+  <h3>Folders</h3>
 
-<h5>Projects</h5>
-<ul>
-    <li><a href="projects/repdashboard">REP Dashboard</a></li>
-</ul>
+  <h5>Projects</h5>
+  <ul>
+      <li><a href="projects/repdashboard">REP Dashboard</a></li>
+  </ul>
 
-<h5>Schoolwork</h5>
-<ul>
-  <li><a href="school/itse-1411">Beginning Web Programming <i>(ITSE-1411)</i></a></li>
-</ul>
+  <h5>Schoolwork</h5>
+  <ul>
+    <li><a href="school/itse-1411">Beginning Web Programming <i>(ITSE-1411)</i></a></li>
+  </ul>
+</section>
