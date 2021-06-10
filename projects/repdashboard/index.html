@@ -41,10 +41,15 @@
         padding: 10px;
         }
 
+    #enlarge-heat-map {
+        width:97%;
+        height:auto;
+        max-height:none;
+        }
+
     #enlarge-heat-map:hover {
         width:110vw;
         min-height:70vw;
-        max-height:none;
         position:relative;
         left:-5vw;
         cursor: zoom-in;
@@ -67,9 +72,10 @@
             <p>
                 This is an automated dashboard that displays otherwise manually generated information used for Real Estate Photography and related processes. REP Dashboard takes photoshoot information from Google Calendar, aggregates it via Google Sheets, then presents it dynamically as a web app. When used, this centralized hub eliminated approximately 10 hours a month in manual data entry, provided data insights over time (like a heat map), and improved time management for myself as a photographer. 
                 <br/>
-                <br/>
-                <strong>Note:</strong> "REP" is an acronym for real estate photographer. "REP Dashboard" was changed from its original name to avoid copyrighting.
-                <br/>To save on resources and due to it not being currently used, REP Dashboard is not live.
+                <p hidden>
+                    <strong>Note:</strong> "REP" is an acronym for real estate photographer. "REP Dashboard" was changed from its original name to avoid copyrighting.
+                    <br/>To save on resources and due to it not being currently used, REP Dashboard is not live.
+                </p>
             </p>
         </section>
 
@@ -102,7 +108,7 @@
         <blockquote>
 
             <h3>User Interface</h3>
-            The user interface features a top header and a bottom navigation. The botton nav has five tabs each with their own purpose. Below are screenshots and functionality discriptions of each tab.
+            The user interface includes a top header and a bottom navigation. The botton nav has five tabs each with their own purpose. Below are screenshots and functionality discriptions of each tab.
             <br/>
             <br/>
             <strong>Interactive Features:</strong>
@@ -263,7 +269,7 @@
             <br/>
             <br/>
             <hr/>
-            <img class="sc" id="enlarge-heat-map" src="res/images/heatmap.png" style="min-height:500px;"/>
+            <img class="sc" id="enlarge-heat-map" src="res/images/heatmap.png"/>
 
         </blockquote><!--Heat Map-->
 
