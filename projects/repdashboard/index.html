@@ -70,7 +70,7 @@
             <h2>REP Dashboard</h2>
             <h3>Project Details</h3>
             <p>
-                This is an automated dashboard that displays otherwise manually generated information used for Real Estate Photography and related processes. REP Dashboard takes photoshoot information from Google Calendar, aggregates it via Google Sheets, then presents it dynamically as a web app. When used, this centralized hub eliminated approximately 10 hours a month in manual data entry, provided data insights over time (like a heat map), and improved time management for myself as a photographer. 
+                This is an automated dashboard that displays otherwise manually generated information used for Real Estate Photography business processes. REP Dashboard takes photoshoot information from Google Calendar, aggregates it via Google Sheets, then presents it dynamically as a web app. When used, this centralized hub eliminated approximately 10 hours a month in manual data entry, provided data insights over time (like a heat map), and improved time management for myself as a photographer. 
                 <br/>
                 <p hidden>
                     <strong>Note:</strong> "REP" is an acronym for real estate photographer. "REP Dashboard" was changed from its original name to avoid copyrighting.
@@ -82,10 +82,6 @@
 
 
         <aside>
-            <a href="#user-interface">User Interface</a>
-
-            &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;
-    
             <a href="#front-end">Front End</a>
 
             &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;
@@ -93,13 +89,92 @@
             <a href="#back-end">Back End</a>
 
             &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;
-    
-            <a href="#a-diagram">Architectual Diagram</a>
+<span hidden>
+            <a href="#a-diagram">Architecture Diagram</a>
+
+            &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;
+</span>    
+            <a href="#user-interface">User Interface</a>
 
             &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;
     
             <a href="#heat-map">Heat Map</a>
         </aside>
+
+
+
+
+
+
+
+        
+        <div class="spacer" id="front-end"></div>
+        <blockquote>
+
+            <h3>Front End</h3>
+            The front end was built using the following resources.
+            <br/>
+            <br/>
+            <hr/>
+            <ul>
+                <li>IDE: Google Cloud Platform's Script Editor; TextWrangler</li>
+                <li>Framework: Google Apps Script</li>
+                <li>Languages: JavaScript; HTML; CSS</li>
+            </ul>
+        </blockquote><!--Front End-->
+
+
+
+
+
+
+
+        
+        
+        <div class="spacer" id="back-end"></div>
+        <blockquote>
+
+            <h3>Back End</h3>
+            The back end was built using the following structure.
+            <br/>
+            <br/>
+            <hr/>
+            <ul>   
+                <li>Authentication: OAuth 2.0 via Google Cloud Platform</li>
+                <li>Data In: Google Calendar</li>
+                <li>Data Storage: Google Sheets</li>
+                <li>Data Aggregation: AWS Lambda custom web scraper API; GCP's Distance Matrix API; GCP's Geocoding API; GCP's Maps JavaScript API</li>
+                <li>Automation: GCP's Triggers</li> 
+                <li>Cloud Resources: Apache Server running Linux via AWS EC2; SSH; AWS Route 53 for custom domain; AWS Certificate Manager and ELB for secure http/https protocals</li>
+                <li>Cloud Back Up, Logs, & Version Control: GCP's Execution Logs and Version Logs; GitHub</li>
+                <li>Languages: Python w/ JSON; JavaScript; Bash</li>
+            </ul>
+
+        </blockquote><!--Back End-->
+
+
+
+
+
+
+
+        
+        
+        <div class="spacer" id="a-diagram"></div>
+        <blockquote hidden>
+
+            <h3>Architecture Diagram</h3>
+            The following diagram shows the flow and integration of development resources.
+            <br/>
+            <br/>
+            <hr/>
+            <img class="sc" src="res/images/a-diagram.png" style="min-height:500px;" hidden/>
+            <i>...in progress...</i>
+
+        </blockquote><!--Architecture Diagram-->
+
+
+        
 
 
 
@@ -194,77 +269,6 @@
             </div> 
 
         </blockquote><!--User Interface-->
-
-
-
-
-
-
-
-        
-        <div class="spacer" id="front-end"></div>
-        <blockquote>
-
-            <h3>Front End Design</h3>
-            The front end was built using the following resources.
-            <br/>
-            <br/>
-            <hr/>
-            <ul>
-                <li>IDE: Google Cloud Platform's Script Editor; TextWrangler</li>
-                <li>Languages: JavaScript; HTML; CSS</li>
-                <li>Framework: Google Apps Script</li>
-            </ul>
-        </blockquote><!--Front End-->
-
-
-
-
-
-
-
-        
-        
-        <div class="spacer" id="back-end"></div>
-        <blockquote>
-
-            <h3>Back End Design</h3>
-            The back end was built using the following structure.
-            <br/>
-            <br/>
-            <hr/>
-            <ul>
-                <li>Automation: Google Cloud Platform's Triggers</li> 
-                <li>Data In: Google Calendar</li>
-                <li>Data Storage: Google Sheets</li>
-                <li>Data Aggregation: AWS Lambda custom web scraper API; GCP's Distance Matrix API; GCP's Geocoding API; GCP's Maps JavaScript API</li>
-                <li>Cloud Resources: Apache Server running Linux via AWS EC2; AWS Route 53 for custom domain; AWS Certificate Manager and ELB for secure http/https protocals</li>
-                <li>Cloud Back Up w/ Version Control: GitHub</li>
-                <li>Languages: Python w/ JSON; JavaScript</li>
-            </ul>
-
-        </blockquote><!--Back End-->
-
-
-
-
-
-
-
-        
-        
-        <div class="spacer" id="a-diagram"></div>
-        <blockquote>
-
-            <h3>Architectual Diagram</h3>
-            The following diagram shows the flow and integration of development resources.
-            <br/>
-            <br/>
-            <hr/>
-            <img class="sc" src="res/images/a-diagram.png" style="min-height:500px;" hidden/>
-            <i>...in progress...</i>
-
-        </blockquote><!--Architectual Diagram-->
 
 
 
