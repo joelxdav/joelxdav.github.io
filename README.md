@@ -18,5 +18,6 @@
   <h5>Schoolwork</h5>
   <ul>
     <li><a href="school/itse-1411">Beginning Web Programming <i>(ITSE-1411)</i></a></li>
+    <li><a href="school/itse-2417">Java Programming <i>(ITSE-2417)</i></a></li>
   </ul>
 </section>
