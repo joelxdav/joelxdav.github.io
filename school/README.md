@@ -1,6 +1,8 @@
-This directory contains assignments from school.
+<h1>Schoolwork</h1>
+
+<p>This directory contains assignments from various academic courses.</p>
 
 <ol>
-    <li><a href="itse-1411">ITSE-1411</a></li>
-    <li><a href="itse-2417">ITSE-2417</a></li>
+    <li><a href="itse-1411">Beginning Web Programming <i>(ITSE-1411)</i></a></li>
+    <li><a href="itse-2417">Java Programming <i>(ITSE-2417)</i></a></li>
 </ol>
