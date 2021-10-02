@@ -1,0 +1,48 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+  <meta charset="UTF-8">
+  <title>Home</title>
+  <link rel="stylesheet" type="text/css" href="/res/styles.css"> 
+  <link rel="icon" href="/res/icon.gif" type="image/jpg" sizes="16x16">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="/res/scripts.js"></script>
+  <script>
+  
+
+  // load local README.md content into index page "content" div
+  $.get("https://raw.githubusercontent.com/joelxdav/collabs/main/koda/index.html", function(response) {
+    $('#content').html(response);
+    
+  });
+
+
+
+  // get pathname and display in footer
+  var path = window.location.pathname;
+  var pn = path.replace('/index.html','');
+      pn = pn.replace(/(.*)joelxdav.github.io/,'');
+      if (pn == '') {pn = 'Main';}
+      $('#path').html(pn);
+
+
+  
+</script>
+</head>
+<body>
+  <span id="top"></span>
+  <header></header><!--content loaded via /res/script.js-->
+
+
+
+  <main> 
+    
+    <div id="content"></div><!--content loaded from README.md-->
+
+  </main>
+
+
+
+  <footer></footer><!--content loaded via /res/script.js-->
+</body>
+</html>
