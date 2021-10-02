@@ -1,7 +1,7 @@
 <section>
 <h1>Welcome</h1>
 <p>
-    This repository contains personal projects and assignments from school.
+    This repository contains personal projects, collaborations, and assignments from school.
 </p>
 </section>
 
@@ -13,6 +13,11 @@
   <h5>Projects</h5>
   <ul>
       <li><a href="projects/repdashboard">REP Dashboard</a></li>
+  </ul>
+
+  <h5>Collabs</h5>
+  <ul>
+      <li><a href="collabs">See Collaborations</a></li>
   </ul>
 
   <h5>Schoolwork</h5>
