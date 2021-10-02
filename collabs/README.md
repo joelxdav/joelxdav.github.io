@@ -1,7 +1,7 @@
 <h1>Collabs</h1>
 
-<p>This page contains links collaborations.</p>
+<p>This page contains links to collaboration pages.</p>
 
 <ol>
-    <li><a href="koda">KODA</a></li>
+    <li><a href="koda">KODA</a> (test)</li>
 </ol>
