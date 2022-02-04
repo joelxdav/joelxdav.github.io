@@ -14,12 +14,14 @@
   <ul>
       <li><a href="projects/repdashboard">REP Dashboard</a></li>
   </ul>
-
+    
+<div hidden>
   <h5>Collabs</h5>
   <ul>
       <li><a href="collabs">See Collaborations</a></li>
   </ul>
-
+</div>
+    
   <h5>Schoolwork</h5>
   <ul>
     <li><a href="school/itse-1411">Beginning Web Programming <i>(ITSE-1411)</i></a></li>
