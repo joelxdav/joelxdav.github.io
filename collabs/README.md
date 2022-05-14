@@ -3,5 +3,5 @@
 <p>This page contains links to collaboration pages.</p>
 
 <ol>
-    <li><a href="koda">KODA</a> (test)</li>
+    <li><a href="koda">KODA</a></li>
 </ol>
