@@ -1,28 +1,47 @@
-<html>
-  <head>
-    <script>
-      
-      $(document).ready(function() {
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+  <meta charset="UTF-8">
+  <title>Home</title>
+  <link rel="stylesheet" type="text/css" href="/res/styles.css"> 
+  <link rel="icon" href="/res/icon.gif" type="image/jpg" sizes="16x16">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="/res/scripts.js"></script>
+  <script>
+    $(document).ready(function() {
+      /* *** not currently used ***
+      // get page parameters 
+      const queryString = window.location.search;
+      console.log(queryString); // ?week=1&...
+      const urlParams = new URLSearchParams(queryString);
+      var param_name = ; //enter the expected param you're searching for
+      var param_value = parseInt(urlParams.get('{param_name}'));
+      console.log(param_value);
+      */
 
-        // get page parameters *** not currently used ***
-        const queryString = window.location.search;
-        console.log(queryString); // ?week=1&...
-        const urlParams = new URLSearchParams(queryString);
-        //var specific_param_value = parseInt(urlParams.get('{specific_param_name}'));
-        // ...do something with specific_param_value
 
-
-        // load local README.md content into index page "content" div
-        $.get("https://www.yahoo.com/news/rss", function(response) {
-          $('#content').html(response);
-        });
-
-
+      // load local README.md content into index page "content" div
+      $.get("https://www.yahoo.com/news/rss", function(response) {
+        $('#content').html(response);
       });
 
-    </script>
-  </head>
-  <body>
-    <main id="content"></main>
-  </body>
+    });
+  </script>
+</head>
+<body>
+  <span id="top"></span>
+  <header></header><!--content loaded via /res/script.js-->
+
+
+
+  <main> 
+    
+    <div id="content"></div><!--content loaded from README.md-->
+
+  </main>
+
+
+
+  <footer></footer><!--content loaded via /res/script.js-->
+</body>
 </html>
