@@ -1,8 +1,8 @@
-<h1>[TITLE]</h1>
+<h1>SAMPLE_TITLE</h1>
 
-<p>[SAMPLE_CONTENT_PLACEHOLDER_1]</p>
+<p>SAMPLE_LIST_TITLE_1</p>
 
 <ol>
-  <li><a href="/">FAKE_LINK_1</a></li>
-  <li><a href="/">FAKE_LINK_2</a></li>
+  <li><a href="/">SAMPLE_LINK_1</a></li>
+  <li><a href="/">SAMPLE_LINK_2</a></li>
 </ol>
