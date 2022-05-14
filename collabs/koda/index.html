@@ -8,24 +8,29 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="/res/scripts.js"></script>
   <script>
-    $(document).ready(function() {
-      /* *** not currently used ***
-      // get page parameters 
-      const queryString = window.location.search;
-      console.log(queryString); // ?week=1&...
-      const urlParams = new URLSearchParams(queryString);
-      var param_name = ; //enter the expected param you're searching for
-      var param_value = parseInt(urlParams.get('{param_name}'));
-      console.log(param_value);
-      */
-
-
-      // load local README.md content into index page "content" div
-      $.get("https://www.yahoo.com/news/rss", function(response) {
-        $('#news-feed').html(response);
+    $(document).ready(function()
+    {
+      $.ajax({
+        type: "GET",
+        url: "https://www.yahoo.com/news/rss",
+        dataType: "xml",
+        success: parseXml
       });
-
     });
+
+    function parseXml(xml)
+    {
+      $("#main").html("<ul id='content' data-role='listview' data-inset='true'></ul>");
+      $(xml).find("item").each(function()
+      {
+        $("#news-feed").append(
+          "<li><a href='"+$(this).find("link").text()
+          + "'><img src='"+$(this).find("image").text()
+          + "'/><h2>"+$(this).find("title").text()
+          + "</h2><p>"+$(this).find("title").text()+"</p></a></li>"
+        );
+      });  
+    }
   </script>
 </head>
 <body>
@@ -37,7 +42,7 @@
   </main>
 
   <aside> 
-    <div id="news-feed"></div><!--content loaded from README.md-->
+    <div id="news-feed"></div><!--content loaded from https://www.yahoo.com/news/rss-->
   </aside>
 
   <footer></footer><!--content loaded via /res/script.js-->
