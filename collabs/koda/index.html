@@ -2,7 +2,7 @@
 <html lang="en-US">
 <head>
   <meta charset="UTF-8">
-  <title>Home</title>
+  <title>Collabs | News-Feed</title>
   <link rel="stylesheet" type="text/css" href="/res/styles.css"> 
   <link rel="icon" href="/res/icon.gif" type="image/jpg" sizes="16x16">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -20,14 +20,15 @@
 
     function parseXml(xml)
     {
-      $("#main").html("<ul id='content' data-role='listview' data-inset='true'></ul>");
       $(xml).find("item").each(function()
       {
         $("#news-feed").append(
-          "<li><a href='"+$(this).find("link").text()
-          + "'><img src='"+$(this).find("image").text()
-          + "'/><h2>"+$(this).find("title").text()
-          + "</h2><p>"+$(this).find("title").text()+"</p></a></li>"
+          "<li>" + 
+          "<a href='" + $(this).find("link").text() + "'>" +
+          "<h2>" + $(this).find("title").text() + "</h2></a>" +  
+          "<br/><img src='"+$(this).find("media:content").attr('url') + "'/><br/>" + 
+          "<p>Source: <a href='" + $(this).find("source").attr('url') + "'>" + $(this).find("source").text() + "</a></p>" + 
+          "</li>"
         );
       });  
     }
@@ -42,7 +43,7 @@
   </main>
 
   <aside> 
-    <div id="news-feed"></div><!--content loaded from https://www.yahoo.com/news/rss-->
+    <ul id="news-feed" data-role="listview" data-inset="true"></ul><!--content loaded from https://www.yahoo.com/news/rss-->
   </aside>
 
   <footer></footer><!--content loaded via /res/script.js-->
