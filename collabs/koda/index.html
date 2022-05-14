@@ -1,31 +1,28 @@
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<html>
+  <head>
+    <script>
+      
+      $(document).ready(function() {
 
-<script>
+        // get page parameters *** not currently used ***
+        const queryString = window.location.search;
+        console.log(queryString); // ?week=1&...
+        const urlParams = new URLSearchParams(queryString);
+        //var specific_param_value = parseInt(urlParams.get('{specific_param_name}'));
+        // ...do something with specific_param_value
 
-  var URL = "https://raw.githubusercontent.com/joelxdav/collabs/main/koda/index.html";
-/*
-  $.ajax({
-      url: URL, 
-      error: function(req,status,err){
-        document.write("--Url: "+url+"\n--Req: "+JSON.stringify(req)+"\n--Status: "+status+"\n--Err: "+err); 
 
-      },   
-      success: function(response) {
-        document.write(response);
-        
-      }
-    });
-   */
+        // load local README.md content into index page "content" div
+        $.get("https://www.yahoo.com/news/rss", function(response) {
+          $('#content').html(response);
+        });
 
-    var xmlhttp;
-    if (window.XMLHttpRequest)
-    {
-      xmlhttp = new XMLHttpRequest();
-    }
-    xmlhttp.open("GET", URL, true);
-    xmlhttp.send();
 
-    document.write(xmlhttp.responseText);
-  
+      });
 
-</script>
+    </script>
+  </head>
+  <body>
+    <main id="content"></main>
+  </body>
+</html>
