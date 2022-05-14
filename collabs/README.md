@@ -3,5 +3,6 @@
 <p>This page contains links to collaboration pages.</p>
 
 <ol>
-    <li><a href="koda">KODA</a></li>
+    <li><a href="koda">Koda</a></li>
+    <li><a href="news-feed">News Feed</a></li>
 </ol>
