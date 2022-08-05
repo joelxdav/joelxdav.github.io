@@ -7,14 +7,45 @@
     box-sizing: border-box;
 }
 
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
 
 header{
     width: 100%;
-   background-color: whitesmoke;
+    height: 100px;
+    background-color: whitesmoke;
     display: flex;
     justify-content: center;
     padding: 30px;
     font-size: 40px;
     font-family: 'Playfair Display', sans-serif;
     letter-spacing: 5px;
+    margin-bottom: 50px;
+    font-weight: bold;
+    font-style: italic;
+}
+
+#grid{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    width: 300px;
+   
+}
+
+.cell{
+    border: 3px rgb(192, 185, 185) solid;
+    width: 50px;
+    height: 50px;
+    font-weight: bold;
+    font-size: 20px;
+    font-family: 'Playfair Display', sans-serif;
+    margin-top: 10px;
+    margin-left: 10px;
+    text-align: center;
 }
