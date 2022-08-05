@@ -4,8 +4,9 @@
 :root{
     --green: rgb(41, 240, 120);   /*green for correct letter in correct positon */
     --yellow: rgb(201, 208, 9);  /*yellow for inccorect position but right letter */
-    --red: rgb(125, 121, 121);  /*grey for inccorect letter */
+    --grey: rgb(125, 121, 121);  /*grey for inccorect letter */
     --white: rgb(255, 255, 255);
+    --border-colors: rgb(192, 185, 185);
 }
 
 *{
@@ -46,7 +47,7 @@ header{
 }
 
 .cell{
-    border: 3px rgb(192, 185, 185) solid;
+    border: 3px var(--border-colors) solid;
     width: 50px;
     height: 50px;
     font-weight: bold;
@@ -57,5 +58,29 @@ header{
     text-align: center;
     color: white;
     
-    background-color: var(--white);
+    background-color: white;
+}
+
+#submitButton{
+    border: 3px solid var(--border-colors);
+    background-color: white;
+    color: black;
+    font-family: 'Playfair Display', sans-serif;
+    margin-top: 25px;
+    width: 100px;
+    height: 50px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 5px;
+    letter-spacing: 3px;
+    padding: 3px;
+    cursor: pointer;
+}
+
+#submitButton:hover{
+    border: 3px solid var(--border-colors);
+    background-color: var(--grey);
+    color: white;
+   
+    
 }
