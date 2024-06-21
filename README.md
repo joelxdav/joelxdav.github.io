@@ -21,7 +21,7 @@
     <li><a href="school/itse-2417">Java Programming <i>(ITSE-2417)</i></a></li>
   </ul>
 
-<div>
+<div hidden>
   <h5>Collabs</h5>
   <ul>
       <li><a href="collabs">See Collaborations</a></li>
