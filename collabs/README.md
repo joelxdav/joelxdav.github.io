@@ -3,6 +3,6 @@
 <p>This page contains links to collaboration pages.</p>
 
 <ol>
-    <li><a href="koda">Koda</a></li>
-    <li><a href="news-feed">News Feed</a></li>
+    <li><a href="art-checkout-logic">Art Checkout Logic</a></li>
+
 </ol>
