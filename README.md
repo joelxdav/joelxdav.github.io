@@ -20,11 +20,19 @@
     <li><a href="school/itse-1411">Beginning Web Programming <i>(ITSE-1411)</i></a></li>
     <li><a href="school/itse-2417">Java Programming <i>(ITSE-2417)</i></a></li>
   </ul>
+
+<div>
+  <h5>Collabs</h5>
+  <ul>
+      <li><a href="collabs">See Collaborations</a></li>
+  </ul>
+</div>
     
 <div>
   <h5>Misc</h5>
   <ul>
-      <li><a href="collabs">See Miscellaneous Code</a></li>
+      <li><a href="misc">See Miscellaneous Code</a></li>
   </ul>
 </div>
+
 </section>
