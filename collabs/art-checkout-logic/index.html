@@ -1,0 +1,36 @@
+<html>
+  <body>
+    <h2>Sample Checkout Logic</h2>
+    <table>
+      <tr>
+        <td>Length</td><td><input type="text" id="length" value="24" /></td>
+      </tr>
+      <tr>
+        <td>Width</td><td><input type="text" id="width" value="36" /></td>
+      </tr>
+      <tr>
+        <td>Depth</td><td><input type="text" id="depth" value="1.5" /></td>
+      </tr>
+      <tr>
+        <td>QTY</td><td><input type="number" id="quantity" value=1 /></td>
+      </tr>
+      <tr>
+        <td>Item</td>
+        <td>
+          <select id="item">
+            <option value="Stretched Canvas Print">Stretched Canvas Print</option>
+            <option value="Hand Embellishing">Hand Embellishing</option>
+            <option value="Epoxy Resin">Epoxy Resin</option>
+            <option value="Frame">Frame</option>
+          </select>
+        </td>
+      </tr>
+      <tr>
+        <td></td><td><button onclick="update_order()">Update Order</button></td>
+      </tr>
+      <tr>
+        <td>Total $</td><td><input type="text" id="total" /></td>
+      </tr>
+    </table>
+  </body>
+</html>
