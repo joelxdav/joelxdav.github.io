@@ -1,7 +1,7 @@
 <section>
 <h1>Welcome</h1>
 <p>
-    This repository contains personal projects, collaborations, and assignments from school.
+    This repository contains personal projects, assignments, and miscellaneous code.
 </p>
 </section>
 
