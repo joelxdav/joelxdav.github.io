@@ -1,7 +1,7 @@
 <section>
 <h1>Welcome</h1>
 <p>
-    This repository contains personal projects, collaborations, and assignments from school.
+    This repository contains personal projects, assignments, and miscellaneous code.
 </p>
 </section>
 
@@ -14,15 +14,25 @@
   <ul>
       <li><a href="projects/repdashboard">REP Dashboard</a></li>
   </ul>
-
-  <h5>Collabs</h5>
-  <ul>
-      <li><a href="collabs">See Collaborations</a></li>
-  </ul>
-
+    
   <h5>Schoolwork</h5>
   <ul>
     <li><a href="school/itse-1411">Beginning Web Programming <i>(ITSE-1411)</i></a></li>
     <li><a href="school/itse-2417">Java Programming <i>(ITSE-2417)</i></a></li>
   </ul>
+
+<div hidden>
+  <h5>Collabs</h5>
+  <ul>
+      <li><a href="collabs">See Collaborations</a></li>
+  </ul>
+</div>
+    
+<div>
+  <h5>Misc</h5>
+  <ul>
+      <li><a href="misc">See Miscellaneous Code</a></li>
+  </ul>
+</div>
+
 </section>

@@ -17,7 +17,8 @@ $(document).ready(function() {
   });
 
   $.get("/res/footer.html", function(response) {
-    $('footer').html(response);
+    $('footer').html(response); 
+    document.getElementById("year").innerHTML = new Date().getFullYear();
   });
 
 
