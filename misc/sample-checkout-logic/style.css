@@ -1,6 +1,9 @@
 body {
   font-family: Raleway, sans-serif;
 }
+#main-content {
+  margin: 10vh 5vw; 
+}
 input, select {
   border: none;
   border-bottom: 2px solid #aeaeae;
@@ -28,4 +31,5 @@ button:hover {
 }
 button:active {
   opacity: 1;
-}
+} 
+
