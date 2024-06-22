@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>React JS Practice</title>
+  </head>
+  <body>
+
+    <h2>React JS Practice</h2>
+    <p>React is loaded as a script tag. This page demonstrates using React.</p>
+
+    <!-- React components -->
+    <div> 
+      <div id="form1-input"></div>
+      <div id="form1_submit"></div>  
+      <div id="form1_output"></div> 
+      <br/>
+      <div id="like_button_container"></div>
+    </div>
+
+
+    <!-- Load React -->
+    <!-- Note: when deploying, replace "development.js" with "production.min.js". -->
+    <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+
+    <!-- React component files -->
+    <script src="like_button.js"></script>
+    <script src="form1.js"></script>
+
+  </body>
+</html> 
