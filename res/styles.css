@@ -168,6 +168,15 @@ ul {
   display:inline;
   }
 
+
+.misc-iframe {
+  min-width: 1100px;
+  max-width: 90vw;
+  min-height: 500px;
+  height: auto;
+  border: none;
+}
+
 footer {
   background-image: url("../week03/trans-bg.gif");
   background-color: #fff;
