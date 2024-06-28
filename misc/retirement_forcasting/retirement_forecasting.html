@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+<title>Investment Forecasting</title>
+<style>
+	body { padding:0px 10px; text-align:center; }
+	input { max-width:50px; }
+    p { 
+    	line-height:25px; 
+    	text-align:left;
+    	margin-right:10px;
+    	display:inline-block; 
+    	}
+    .demos {
+    	background:#CAFACB;
+    	border-radius:5px;
+    	max-width:350px;
+    	padding:7px;
+    	margin-right:7px;
+    	display:inline-block;
+    }
+</style>
+<body onload="calc()">
+
+<h3>Investment Forecasting</h3>
+
+	<p class="demos">
+
+	If you put <b>$300</b> into your retirement account <br>
+	every two weeks (52 ÷ 2 = <b>26</b>) for <b>30</b> years <br>
+    with an interest rate of <b>8.00%</b>, you would have <br>
+    accumulated <b>$936,641</b> in retirement savings <br>
+    had you started at <b>$5000</b>. <br>*Yearly interest to live off of: $<b>74,931</b>.
+    
+	</p>
+	<p class="demos" style="background:#FDFCDB;">
+
+	If you put <b>$400</b> into your retirement account <br>
+	every two weeks (52 ÷ 2 = <b>26</b>) for <b>30</b> years <br>
+    with an interest rate of <b>8.00%</b>, you would have <br>
+    accumulated <b>$1,282,397</b> in retirement savings <br>
+    had you started at <b>$10000</b>. <br>*Yearly interest to live off of: $<b>102,591</b>.
+    
+	</p>
+	<p class="demos" style="background:#FFACA9;">
+
+	If you put <b>$150</b> into your retirement account <br>
+	every two weeks (52 ÷ 2 = <b>26</b>) for <b>30</b> years <br>
+    with an interest rate of <b>8.00%</b>, you would have <br>
+    accumulated <b>$453,226</b> in retirement savings <br>
+    had you started at <b>$1000</b>. <br>*Yearly interest to live off of: $<b>36,258</b>.
+    
+	</p>
+	
+	
+	<h3>Compare Scenarios</h3>
+	
+	
+	<p style="background:#ccd9e8;padding:7px;border-radius:5px;"> 
+    
+	Starting Account Balance: $<input type="number" id="a" value="100000"> <br>
+    Investment Account Interest Rate: <input type="number" id="b" value="8.00">% <br>
+    Duration: <input type="number" id="c" value="30"> Years <br>
+    Deposits per Year: <input type="number" id="d" value="26"> <em>(26 for bi-weekly paycheck; 12 for monthly)</em><br>
+    Deposit Amount: $<input type="number" id="e" value="0"> <em>(per check)</em><br>
+    <br>
+    <button onclick="calc()">Calculate</button>
+    <br>
+    <br>
+    Total Investment: <b>$<span id="total_investment"> </span></b>
+    <br>
+    Accumulated Savings: <b>$<span id="savings"> </span></b>
+    <br>
+    Interest Generated Per Succeeding Year: <b>$<span id="itloopy"></span></b> <br>
+    <em>(if principal savings left untouched [ie:only withdrawal new interest])</em>
+
+	</p><p style="background:#ccd9e8;padding:7px;border-radius:5px;"> 
+    
+	Starting Account Balance: $<input type="number" id="a2" value="1000"> <br>
+    Investment Account Interest Rate: <input type="number" id="b2" value="8.00">% <br>
+    Duration: <input type="number" id="c2" value="30"> Years <br>
+    Deposits per Year: <input type="number" id="d2" value="12"> <em>(26 for bi-weekly paychecks; 12 for monthly)</em><br>
+    Deposit Amount: $<input type="number" id="e2" value="800"> <em>(per check)</em><br>
+    <br>
+    <button onclick="calc_2()">Calculate</button>
+    <br>
+    <br>
+    Total Investment: <b>$<span id="total_investment2"> </span></b>
+    <br>
+    Accumulated Savings: <b>$<span id="savings2"> </span></b>
+    <br>
+    Interest Generated Per Succeeding Year: <b>$<span id="itloopy_2"></span></b> <br>
+    <em>(if principal savings left untouched [ie:only withdrawal new interest])</em>
+</p>
+
+
+
+<script>
+
+	function numberWithCommas(x) {
+   		return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+	}
+    function calc() {
+		var account_balance = 	parseFloat(document.getElementById("a").value);
+        var interest_rate = 	parseFloat(document.getElementById("b").value) * .01;
+        var duration_in_years = parseFloat(document.getElementById("c").value);
+        var deposits_per_year = parseFloat(document.getElementById("d").value);
+        var deposit_amount = 	parseFloat(document.getElementById("e").value);
+        
+        var totalInv = account_balance;
+        var years_x_deps = duration_in_years * deposits_per_year;
+   
+    
+ 		for (var k=years_x_deps; k>0; --k) {   		
+            account_balance += deposit_amount;
+            totalInv += deposit_amount;
+    
+        	if (k%deposits_per_year==0) {
+        		account_balance += (account_balance * interest_rate);
+			}
+ 		}
+
+
+        
+        var total_investment = totalInv;
+        document.getElementById("total_investment").innerHTML = 
+        	numberWithCommas(parseInt(total_investment));
+        
+        
+		document.getElementById("savings").innerHTML = 
+        	numberWithCommas(parseInt(account_balance));
+        
+    	
+        var interest_per_suceeding_year = 
+        	parseInt(account_balance) * interest_rate;
+        document.getElementById("itloopy").innerHTML = 
+        	numberWithCommas(parseInt(interest_per_suceeding_year));
+	
+    }
+//---------------------------------------------------------------------------------------//
+
+    function calc_2() {
+		var account_balance_2 = 	parseFloat(document.getElementById("a2").value);
+        var interest_rate_2 = 	parseFloat(document.getElementById("b2").value) * .01;
+        var duration_in_years_2 = parseFloat(document.getElementById("c2").value);
+        var deposits_per_year_2 = parseFloat(document.getElementById("d2").value);
+        var deposit_amount_2 = 	parseFloat(document.getElementById("e2").value);
+       
+        var totalInv_2 = account_balance_2; 
+        var years_x_deps_2 = duration_in_years_2 * deposits_per_year_2;
+   
+    
+ 		for (var k=years_x_deps_2; k>0; --k) {   		
+            account_balance_2 += deposit_amount_2;
+            totalInv_2 += deposit_amount_2;
+    
+        	if (k % deposits_per_year_2 == 0) {
+        		account_balance_2 += (account_balance_2 * interest_rate_2);
+			}
+ 		}
+
+        
+
+        
+        var total_investment_2 = totalInv_2;
+        document.getElementById("total_investment2").innerHTML = 
+        	numberWithCommas(parseInt(total_investment_2));
+        	
+        
+		document.getElementById("savings2").innerHTML = 
+        	numberWithCommas(parseInt(account_balance_2));
+        
+    	
+        var interest_per_suceeding_year_2 = 
+        	parseInt(account_balance_2) * interest_rate_2;
+        document.getElementById("itloopy_2").innerHTML = 
+        	numberWithCommas(parseInt(interest_per_suceeding_year_2));
+	
+    }
+    
+    
+    calc();
+    calc_2();
+</script>
+    
+</body>
+</html>
