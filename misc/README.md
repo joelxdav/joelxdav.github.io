@@ -5,6 +5,6 @@
 <ol>
     <li><a href="sample-checkout-logic">Sample Checkout Logic</a></li>
     <li><a href="react-js">React JS</a></li>
-    <li><a href="retirement-forcasting">Retirement Forcasting</a></li>
+    <li hidden><a href="retirement-forcasting">Retirement Forcasting</a></li>
 
 </ol>
