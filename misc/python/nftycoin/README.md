@@ -9,8 +9,8 @@
 
 <table cellspacing=2>
     <tr>
-        <td><img src="bin/1LX1lr.png" width=300 /></td>
-        <td><img src="bin/59416M.png" width=300 /></td>
-        <td><img src="bin/P1rQ0T.png" width=300 /></td>
+        <td><img src="bin/1LX1lr.png" width=300 alt="An image of 6 ring coin, which represents the following string: 1LX1lr."/></td>
+        <td><img src="bin/59416M.png" width=300 alt="An image of 6 ring coin, which represents the following string: 59416M."/></td>
+        <td><img src="bin/P1rQ0T.png" width=300 alt="An image of 6 ring coin, which represents the following string: P1rQ0T."/></td>
     </tr>
 </table>
