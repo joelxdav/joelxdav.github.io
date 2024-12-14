@@ -9,8 +9,8 @@
 
 <table cellspacing=2>
     <tr>
-        <td><img src="bin/1LX1lr.png" width=300 /></td>
-        <td><img src="bin/59416M.png" width=300 /></td>
-        <td><img src="bin/P1rQ0T.png" width=300 /></td>
+        <td><img src="bin/1LX1lr.png" width=300 alt="1LX1lr"/></td>
+        <td><img src="bin/59416M.png" width=300 alt="59416M"/></td>
+        <td><img src="bin/P1rQ0T.png" width=300 alt="P1rQ0T"/></td>
     </tr>
 </table>
