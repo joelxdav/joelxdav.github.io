@@ -1,0 +1,83 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>Für Elli.</title>
+    <meta http-equiv="content-type" charset="utf-8" /> 
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=favorite" />
+	<link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
+	<link rel="icon" href="res/images/sprites/sprite-elli-right.png" type="image/jpg" sizes="16x16">
+	<link rel="stylesheet" type="text/css" href="res/style.css"> 
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script> 
+</head>
+<body onload="startTime()">
+	<div id="pw"></div>
+	<header>	
+		<img src="http://static.tumblr.com/gqdu5pa/tRJopat3b/moon-stars.gif" id="moon-stars" />
+		<div id="x"></div>
+		<div id="sky"></div>
+	</header>
+	
+	<!--Sprites-->
+	<img src="res/images/sprites/sprite-joel-left.gif" class="sprite" id="sprite-joel" />
+	<img src="res/images/sprites/sprite-elli-right.gif" class="sprite" id="sprite-elli"/>
+		
+	<!--Desktop Icons-->
+	<img src="res/images/folder.gif" id="folder" class="gif" title="empty folder"/>
+	<img src="res/images/mycomputer.gif" id="mycomputer" class="gif" title="MyComputer"/>
+	<img src="res/images/art.gif" id="art" class="gif" title="art" hidden/> 
+	
+	<div title="*heart*" id="heart"><span class="material-symbols-outlined">favorite</span></div>
+
+
+
+
+	<div id="tiles">
+		<table cellspacing="50">
+			<tr>
+				<td></td>
+				<td><img src="res/images/tree.gif" id="tree" class="gif" alt="tree" hidden/></td>
+				<td></td>
+			</tr><tr>
+				<td><img src="res/images/book.gif" id="book" class="gif" alt="book" hidden/></td>
+				<td></td>
+				<td><img src="res/images/video.gif" id="video" class="gif" alt="video" hidden/></td>
+			</tr><tr>	
+				<td><img src="res/images/notepad.gif" id="notepad" class="gif" alt="notepad" hidden/></td>
+				<td><img src="res/images/document.gif" id="document" class="gif" alt="document" hidden/></td>
+				<td><img src="res/images/program.gif" id="program" class="gif" alt="program" hidden/></td>
+			</tr>
+		</table>
+	</div>
+	
+
+
+	<footer>
+		<img src="res/images/win98_taskbar.png" id="taskbar"/>
+		<div id="clock"></div>
+	</footer> 
+	<script src="res/script.js"></script> 
+	<script src="res/message.js"></script> 
+	<script>
+		function startTime() {
+			const today = new Date();
+			let h = today.getHours();
+			const ampm = h >= 12 ? 'PM' : 'AM';
+			h = h % 12;
+			h = h ? h : 12; // the hour '0' should be '12'
+			let m = today.getMinutes(); 
+			let s = today.getSeconds(); 
+			m = checkTime(m); 
+			s = checkTime(s); 
+			document.getElementById('clock').innerHTML =  h + ":" + m + ":"+s+" " + ampm; 
+			setTimeout(startTime, 1000); 
+		}
+		function checkTime(i) {
+		if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+		return i;
+		}
+	</script>
+</body>
+</html>
