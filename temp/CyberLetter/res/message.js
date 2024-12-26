@@ -62,7 +62,7 @@ function letter(a,l,i) {
 
 
 //// MESSAGES 
-var intro = "Willkommen, Elli! * I wanted to make you this cyber letter, ^ because I love you dearly * ...also the Canadian Post Office is actin' unsavory rn^ , so yeah, had to go the cyber route :P ^ * But I love you baby. ^ I love you so much. * I feel so blessed to have you and I can't wait to share the rest of my life with you. ^ * Thank you for saying, \"Yes.\" ^ * Thank you for being who God made you. ^ * Take care^ , meine schatzi^ , meine liebe^ , my Elli ♡ ^ ^ * Fun Tip: ^ You can move your lil' person back and forth with the arrow keys. ^ * Bye for now (: ^  *";
+var intro = "Willkommen, Elli! * I wanted to make you this cyber letter, ^ because I love you dearly * ...also the Canadian Post Office is actin' unsavory rn^ , so yeah, had to go the cyber route :P ^ * But I love you baby. ^ I love you so much. * I feel so blessed to have you and I can't wait to spend the rest of my life with you. ^ * Thank you for saying, \"Yes.\" ^ * Thank you for being who God made you. ^ * Take care^ , meine schatzi^ , meine liebe^ , my Elli ♡ ^ ^ * Fun Tip: ^ You can move your lil' person back and forth with the arrow keys. ^ * Bye for now (: ^  *";
 
 var poem = "AUTUMN BLOOM ^ ^ * i'd not known a girl like you existed/ ^ A flower buried when I searched for it/ * High and low music, near and far film scenes/ ^ No sign of blooms, not while he's wandering/ * I was beginning to give up on her/ ^ All the water and wandering for naught/ ^ All the sense and patience I had been taught/ ^ Seasons of still, till the harvest is wrought/ * Spring comes then Summer, still no sign of blooms/ ^ Till orange-red-yellow have painted the leaves/ ^ ^ ^ * ^ ^ So I have found, not a second too soon/ It's in fact autumn when that flower blooms/ ^ ^ ^ *";
 
@@ -95,7 +95,7 @@ function begin() {
 			}, 60000); //msg after poem
 		}, 22000); //poem after intro
 		*/
-	}, 10000); //intro
+	}, 7000); //intro
 		
 	/*
 	setTimeout(function(){
@@ -115,19 +115,24 @@ function begin() {
 
 
 
-
 //// ENTER PW
 setTimeout(function() {
-	let pw = prompt("what's the secret word?");	
-	if (pw.toLowerCase() == "bakersfield"){ 
-		alert("that's correct! click OK to continue");
-		document.getElementById("pw").style.opacity = 0; 
-		document.getElementById("pw").style.zIndex = -9; 
-		begin(); 
+	// check screen size
+	if (document.body.clientWidth >= 750 && document.body.clientWidth >= 400) {	
+		let pw = prompt("what's the secret word?");	
+		if (pw.toLowerCase() == "bakersfield"){ 
+			alert("that's correct! click OK to continue");
+			document.getElementById("pw").style.transition = "5s"; 
+			document.getElementById("pw").style.opacity = 0; 
+			document.getElementById("pw").style.zIndex = -9; 
+			begin();
+		} else {
+			alert("sorry incorrect. refresh the page and try again."); 
+		}
 	} else {
-		alert("sorry incorrect. refresh the page and try again."); 
+		alert("Uh-Oh! I detect that your screen size is too small. Please view this page on a Desktop browser. Preferably Chrome."); 
 	}
-}, 1500);
+}, 1000);
 
 
 

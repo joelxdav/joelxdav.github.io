@@ -24,7 +24,7 @@ body {
 	min-height:100vh;
 	max-height:100vh; 
 	z-index:99999; 
-	transition: 5s;
+	/*transition: 5s;*/
 }
 
 #sky {
@@ -93,15 +93,15 @@ body {
 	font-size:30px; 
 	/*font-family:'Indie Flower', sans-serif;*/
 	text-align:left; 
-	min-width: 30%;
-	max-width: 30%;
+	min-width: 32%;
+	max-width: 32%;
 	min-height:300px; 
 	max-height:300px; 
 	margin:0px; 
 	padding:0px; 
 	position:absolute; 
 	left:40%; 
-	bottom:45%; 
+	top:25%; 
 	cursor:crosshair; 
 }
 
