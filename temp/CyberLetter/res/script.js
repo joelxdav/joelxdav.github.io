@@ -1,40 +1,81 @@
 ////////START////////////
 
+//// PW STORAGE TIPS /////////////////////////
+/*
+// Store a value
+localStorage.setItem("firstVisit", "true");
+// Retrieve a value
+let visitCount = localStorage.getItem("firstVisit");
+console.log(username); // Output: John Doe
+// Remove a value
+localStorage.removeItem("username");
+// Clear all values
+localStorage.clear();
+*/
+
+
+//// PW HANDLING///////////////////////// 
+// remove blocker
+function openUp() {
+	document.getElementById("pw").style.transition = "5s"; 
+	document.getElementById("pw").style.opacity = 0; 
+	document.getElementById("pw").style.zIndex = -9; 
+	writeLetter(); 
+	sky();
+} 
+
+// enter pw
+setTimeout(function() {
+	// check screen size
+	if (document.body.clientWidth >= 750 && document.body.clientWidth >= 400) {	
+		// check local storage
+		if (localStorage.getItem("firstVisit") === "false") {
+			let nickname = localStorage.getItem("nickname"); 
+			alert("Welcome back, " + nickname); 
+			openUp(); 
+		} else {
+			let pw = prompt("what's the secret word?");	
+			//check pw
+			if (pw.toLowerCase() == "bakersfield"){ 
+				alert("correct!"); 
+				localStorage.setItem("firstVisit", "false");
+				let nickname = prompt("pick a nickname?");	
+				localStorage.setItem("nickname", nickname);
+				alert("thanks, " + nickname); 
+				openUp();
+			} else { // pw
+				alert("sorry incorrect. refresh the page and try again."); 
+			}
+		} // local storage
+	} else { // screen size
+		alert("Uh-Oh! I detect that your screen size is too small. Please view this page on a Desktop browser. Preferably Chrome."); 
+	}
+}, 1000);
+
+
+
+		
+//// SKY MOVEMENT /////////////////// 
+function sky() {
+	var h = 0 - $("#sky").height();
+	var sh = $(window).height();
+	var m = (h+sh) + "px";
+	$("#sky").animate({top: m}, 100000);
+}
+
+
+
+//// MOON & STARS GIF /////////////////
+setTimeout(function(){
+	$("#moon-stars").animate({opacity: "1"}, 5000); 
+	//$("body").append('<div id="link"><a href="http://dimensionalhearts.tumblr.com/ask">ask me anything</a>&nbsp;&nbsp;<a href="https://open.spotify.com/user/jedpro/playlist/4Whcut8UOi5Y2VR95D1KRB">listen to a playlist</a></div>'); 
+	//$("#link").animate({opacity: "1"}, 5000); 	
+}, 55000); 
 
 
 
 
-//// SPRITE POSITIONING
-const joel = document.getElementById("sprite-joel"); 
-joel.style.left = "50%"; 
-//let joel_x = 600;
-//let joel_y = 10; 
-const elli = document.getElementById("sprite-elli");
-let elli_x = 10;
-let elli_y = 100; 
-
-document.addEventListener("keydown", (event) => {
-  if (event.key === "ArrowLeft") {
-	elli_x -= 1; 
-	elli.style.left = elli_x + "%";
-	elli.style.transform = "scaleX(-1)";
-  } else if (event.key === "ArrowRight") {
-	elli_x += 1; 
-	elli.style.left = elli_x + "%";
-	elli.style.transform = "scaleX(1)";
-  } 
-  /* else if (event.key === "ArrowUp") {
-	elli_y += 10; 
-	elli.style.bottom = elli_y + "px";
-  } else if (event.key === "ArrowDown") {
-	elli_y -= 10; 
-	elli.style.bottom = elli_y + "px";
-  }
-	*/
-});
-
-
-//// MOMENTS CHECK
+//// MOMENTS CHECK //////////////////////////
 function moments() {
 	//CLOCK display check vs window width; 
 	let bodyWidth = document.body.clientWidth; 
@@ -55,7 +96,6 @@ function moments() {
 	} else {
 		joel.style.transform = "scaleX(-1)";
 	}
-	
 	setTimeout(moments, 500); 
 }
 setTimeout(moments, 10); 
@@ -84,98 +124,6 @@ setTimeout(moments, 10);
 
 
 
-
-
-
-
-
-
-
-
-/*
-//// MESSAGE TO ELLI 
-
-function writeMessage(message) {
-	document.getElementById("message").innerHTML = message; 
-}
-
-let message = "Welcome"; 
-setInterval(writeMessage(message), 500); 
-message = "hi"; 
-setInterval(writeMessage(message), 5000); 
-
-
-*/
-
-
-
-
-
-
-
-
-
-/*
-const folder = document.getElementById("folder"); 
-
-const observer = new IntersectionObserver(entries => {
-	entries.forEach(entry => {
-	  if (entry.isIntersecting) {
-		// Do something when the objects intersect
-		console.log("Objects are intersecting!"); 
-	  }
-	});
-  }, {
-	// Optional options for the observer
-	root: null, // Use the viewport as the root
-	threshold: 0.5 // Trigger when 50% of the target intersects
-  });
-  
-  observer.observe(elli);
-  observer.observe(folder);
-
-
-
-
-function alertPosition() {
-	alert(elli.style.left);
-	alert(elli.style.bottom); 
-} 
-*/
-
-
-
-
-
-
-
-/*
-function getRandomInt(max) {
-	return Math.floor(Math.random() * max);
-  }  
-
-function joel_rand_move_x() {
-	joel_x += getRandomInt(10);
-	joel.style.left = joel_x + "px"; 
-}
-function joel_rand_move_y() {
-	joel_y += getRandomInt(10);
-	joel.style.bottom = joel_y + "px"; 
-}
-// Execute the function every 2 seconds (2000 milliseconds)
-let intervalId_x = setInterval(joel_rand_move_x, 250);
-//let intervalId_y = setInterval(joel_rand_move_y, 500);
-
-// Stop the interval after 10 seconds (10000 milliseconds)
-setTimeout(() => {
-	clearInterval(intervalId_x);
-	console.log("Interval stopped.");
-	}, 60000);
-setTimeout(() => {
-	clearInterval(intervalId_y);
-	console.log("Interval stopped.");
-  	}, 60000);
-*/
 
 
 

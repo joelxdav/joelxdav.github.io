@@ -62,9 +62,11 @@ function letter(a,l,i) {
 
 
 //// MESSAGES 
-var intro = "Willkommen, Elli! * I wanted to make you this cyber letter, ^ because I love you dearly * ...also the Canadian Post Office is actin' unsavory rn^ , so yeah, had to go the cyber route :P ^ * But I love you baby. ^ I love you so much. * I feel so blessed to have you and I can't wait to spend the rest of my life with you. ^ * Thank you for saying, \"Yes.\" ^ * Thank you for being who God made you. ^ * Take care^ , meine schatzi^ , meine liebe^ , my Elli ♡ ^ ^ * Fun Tip: ^ You can move your lil' person back and forth with the arrow keys. * Bye for now (: ^ ^ * Oh, and P.S. ^ My family loves you so much lol ^ . They always speak so fondly of you. * Okay bye fr ✌ *";
+var intro = "Hi again :) ^ There's been an update. * The ARROW keys now have a bit more functionality * Have fun ;) *";
 
-var poem = "AUTUMN BLOOM ^ ^ * i'd not known a girl like you existed/ ^ A flower buried when I searched for it/ * High and low music, near and far film scenes/ ^ No sign of blooms, not while he's wandering/ * I was beginning to give up on her/ ^ All the water and wandering for naught/ ^ All the sense and patience I had been taught/ ^ Seasons of still, till the harvest is wrought/ * Spring comes then Summer, still no sign of blooms/ ^ Till orange-red-yellow have painted the leaves/ ^ ^ ^ * ^ ^ So I have found, not a second too soon/ It's in fact autumn when that flower blooms/ ^ ^ ^ *";
+intro = "Willkommen, Elli! * I wanted to make you this cyber letter, ^ because I love you dearly * ...also the Canadian Post Office is actin' unsavory rn^ , so yeah, had to go the cyber route :P ^ * But I love you baby. ^ I love you so much. * I feel so blessed to have you and I can't wait to spend the rest of my life with you. ^ * Thank you for saying, \"Yes.\" ^ * Thank you for being who God made you. ^ * Take care^ , meine schatzi^ , meine liebe^ , my Elli ♡ ^ ^ * Fun Tip: ^ You can move your lil' person back and forth with the arrow keys. * Bye for now (: ^ ^ * Oh, and P.S. ^ My family loves you so much lol ^ . They always speak so fondly of you. * Okay bye fr ✌ *";
+
+var poem = "";
 
 var msg = "";	
 
@@ -76,64 +78,36 @@ var ask = "";
 
 //// WRITE LETTERS TIMERS ///////////////////
 
-
-function begin() {
+function writeLetter() {
+	//intro
 	setTimeout(function(){ 
 		letter(intro, intro.length, 0); 
-		/*
-		setTimeout(function(){
-			$("#x").css("opacity", "1");
-			$("#x").css("color", "#fff");
-			$("#x").css("font-family", "Indie Flower");
-			$("#x").css("text-align", "Center");
-			letter(poem, poem.length, 0); 	
-	
-			setTimeout(function(){
-				$("#x").css("opacity", "1");
-				letter(msg, msg.length, 0); 
-	
-			}, 60000); //msg after poem
-		}, 22000); //poem after intro
-		*/
-	}, 7000); //intro
-		
-	/*
+	}, 5000);
+
+/*
+	//poem after intro
 	setTimeout(function(){
-		$("body").append('<img src="http://static.tumblr.com/gqdu5pa/tRJopat3b/moon-stars.gif" id="ending" />');
-		$("#ending").animate({opacity: "1"}, 5000); 	
-		$("body").append('<div id="link"><a href="http://dimensionalhearts.tumblr.com/ask">ask me anything</a>&nbsp;&nbsp;<a href="https://open.spotify.com/user/jedpro/playlist/4Whcut8UOi5Y2VR95D1KRB">listen to a playlist</a></div>'); 
-		$("#link").animate({opacity: "1"}, 5000); 	
-	}, 50000);
+		$("#x").css("opacity", "1");
+		$("#x").css("color", "#fff");
+		$("#x").css("font-family", "Indie Flower");
+		$("#x").css("text-align", "Center");
+		letter(poem, poem.length, 0); 	
+	}, 22000); 
 	
+	//msg after poem
+	setTimeout(function(){
+		$("#x").css("opacity", "1");
+		letter(msg, msg.length, 0); 
+	}, 60000); 
+	
+	// ask
 	setTimeout(function(){
 		$("#x").css("opacity", "1");
 		letter(ask, ask.length, 0); 	
 	}, 55000);
-	*/
+*/
 
 }
-
-
-
-//// ENTER PW
-setTimeout(function() {
-	// check screen size
-	if (document.body.clientWidth >= 750 && document.body.clientWidth >= 400) {	
-		let pw = prompt("what's the secret word?");	
-		if (pw.toLowerCase() == "bakersfield"){ 
-			alert("that's correct! click OK to continue");
-			document.getElementById("pw").style.transition = "5s"; 
-			document.getElementById("pw").style.opacity = 0; 
-			document.getElementById("pw").style.zIndex = -9; 
-			begin();
-		} else {
-			alert("sorry incorrect. refresh the page and try again."); 
-		}
-	} else {
-		alert("Uh-Oh! I detect that your screen size is too small. Please view this page on a Desktop browser. Preferably Chrome."); 
-	}
-}, 1000);
-
 
 
 

@@ -15,17 +15,21 @@
 <body onload="startTime()">
 	<div id="pw"></div>
 	<header>	
-		<img src="http://static.tumblr.com/gqdu5pa/tRJopat3b/moon-stars.gif" id="moon-stars" />
+		<img src="http://static.tumblr.com/gqdu5pa/tRJopat3b/moon-stars.gif" id="moon-stars"/>
 		<div id="x"></div>
 		<div id="sky"></div>
 	</header>
 	
 	<!--Sprites-->
 	<img src="res/images/sprites/sprite-joel-left.gif" class="sprite" id="sprite-joel" />
-	<img src="res/images/sprites/sprite-elli-right.gif" class="sprite" id="sprite-elli"/>
+	<img src="res/images/speech-bubble.jpg" id="sprite-joel-speech"/>
+	<textarea id="sprite-joel-speech-textbox"></textarea>
+	<img src="res/images/sprites/sprite-elli-right.gif" class="sprite" id="sprite-elli"/> 
+	<img src="res/images/speech-bubble.jpg" id="sprite-elli-speech"/>
+	<textarea id="sprite-elli-speech-textbox"></textarea>
 		
 	<!--Desktop Icons-->
-	<img src="res/images/folder.gif" id="folder" class="gif" title="empty folder"/>
+	<img src="res/images/folder.gif" id="folder" class="gif" title="Empty folder"/>
 	<img src="res/images/mycomputer.gif" id="mycomputer" class="gif" title="MyComputer"/>
 	<img src="res/images/art.gif" id="art" class="gif" title="art" hidden/> 
 	
@@ -56,10 +60,13 @@
 
 	<footer>
 		<img src="res/images/win98_taskbar.png" id="taskbar"/>
-		<div id="clock"></div>
+		<div id="clock"></div> 
+		<table id="t0"><tr><td id="t1"></td><td id="t2"></td><td id="t3"></td></tr></table>
 	</footer> 
 	<script src="res/script.js"></script> 
 	<script src="res/message.js"></script> 
+	<!--<script src="res/speech-handling.js"></script>--> 
+	<script src="res/sprite-movement.js"></script> 
 	<script>
 		function startTime() {
 			const today = new Date();
