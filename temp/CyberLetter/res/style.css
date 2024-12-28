@@ -116,7 +116,7 @@ body {
 	left:10%; 
 	bottom:42px; 
 	cursor:default; 
-	z-index:999; 
+	z-index:9999; 
 	/*transition: .25s;*/
 	}
 #sprite-elli-speech {
@@ -186,7 +186,7 @@ body {
 	color:#FF6666; 
 	opacity:0;
 	position:absolute; 
-	z-index:998; 
+	z-index:9998; 
 	left:51%; 
 	bottom:105px; 
 	transition:1s;
