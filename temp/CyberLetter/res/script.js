@@ -21,9 +21,17 @@ function openUp() {
 	document.getElementById("pw").style.opacity = 0; 
 	document.getElementById("pw").style.zIndex = 1; 
 	document.getElementById("nothin").style.zIndex = -9; 
-	if (localStorage.getItem("VERSION") != "3.0") {
+	const LATEST_VERSION = "3.0";
+	const COUNT_LIMIT = 3;
+	let play_count = localStorage.getItem("PLAY_COUNT") == null ? 0 : parseInt(localStorage.getItem("PLAY_COUNT"));
+	let version = localStorage.getItem("VERSION"); 
+	if (version == LATEST_VERSION && play_count >= COUNT_LIMIT) {
+		// do nothing
+	} else {
+		if (version != LATEST_VERSION) {play_count = -1;}
 		writeLetter(); 
-		localStorage.setItem("VERSION", "3.0");
+		localStorage.setItem("VERSION", LATEST_VERSION);
+		localStorage.setItem("PLAY_COUNT", play_count+1);
 	} 
 	sky();
 } 
