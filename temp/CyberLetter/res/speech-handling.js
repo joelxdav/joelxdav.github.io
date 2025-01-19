@@ -172,7 +172,7 @@ function responseGenerator(topic,message) {
 			]; 
 	}
 
-	let i = Math.floor(Math.random() * responseArray.length);
+	const i = Math.floor(Math.random() * responseArray.length);
 	let response = responseArray[i]; 
 	return response;
 }

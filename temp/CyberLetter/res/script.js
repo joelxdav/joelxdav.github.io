@@ -21,7 +21,10 @@ function openUp() {
 	document.getElementById("pw").style.opacity = 0; 
 	document.getElementById("pw").style.zIndex = 1; 
 	document.getElementById("nothin").style.zIndex = -9; 
-	writeLetter(); 
+	if (localStorage.getItem("VERSION") != "3.0") {
+		writeLetter(); 
+		localStorage.setItem("VERSION", "3.0");
+	} 
 	sky();
 } 
 
