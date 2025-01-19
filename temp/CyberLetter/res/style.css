@@ -73,7 +73,12 @@ body {
 	transition:0.3s; 
 	}
 #folder { top:80px; }
-#art { top:150px; }
+#music { 
+	opacity: 0;
+	top:150px; 
+	cursor:pointer;	
+	transition: 1s;
+	}
 
 
 #message, #x { 

@@ -50,7 +50,7 @@ function respond(response){
 		$("#sprite-joel-speech-textbox").css("height","50px");
 		$("#sprite-joel-speech-textbox").css("display","Block"); 
 		$("#sprite-joel-speech-textbox").val(response);
-		saveMessage(response, "JFROGBOT"); // SAVE MESSAGE
+		saveMessage(response, "JFROG BOT"); // SAVE MESSAGE
 		let clearResponse = setTimeout(() => {	
 			$("#sprite-joel-speech").css("opacity","0");
 			$("#sprite-joel-speech-textbox").css("display","None");
@@ -144,6 +144,14 @@ function responseGenerator(topic,message) {
 				"still surreal i had two motorcycles" 
 			]; 
 		break;
+		case "MUSIC": 
+			responseArray = [
+				"vibes baby, vibes", 
+				"i love finding new music that hits tha feels", 
+				"sharing music feels good when the other person vibes with it",
+				"ya gotta check out my Spotify" 
+			]; 
+		break;
 		default: 
 			responseArray = [
 				"*shrugs*",
@@ -174,19 +182,6 @@ function responseGenerator(topic,message) {
 
 
 
-
-//// PW STORAGE TIPS /////////////////////////
-/*
-// Store a value
-localStorage.setItem("firstVisit", "true");
-// Retrieve a value
-let visitCount = localStorage.getItem("firstVisit");
-console.log(username); // Output: John Doe
-// Remove a value
-localStorage.removeItem("username");
-// Clear all values
-localStorage.clear();
-*/
 
 
 // INTERPRET SPEECH
@@ -228,7 +223,20 @@ function speechInterpretor(msg){
 		interpretation = responseGenerator("MOTORCYCLES",message); 
 		localStorage.setItem("TOPIC", "MOTORCYCLES");
 		} 
+	if (message.includes("music")||message.includes("songs")||message.includes("spotify")) {
+		interpretation = responseGenerator("MUSIC",message); 
+		localStorage.setItem("TOPIC", "MUSIC");
+		showSpotifyLink();
+		} 
 
 	// call the generator for a response
 	respond(interpretation);
 } 
+
+
+function showSpotifyLink() {
+	const music = document.getElementById("music");
+	music.style.opacity = 1;
+	music.style.transform = "scaleX(-1)";
+	setTimeout(function(){music.style.transform = "scaleX(1)"},1500);
+}
