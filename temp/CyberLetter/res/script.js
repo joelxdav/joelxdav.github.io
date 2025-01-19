@@ -17,7 +17,7 @@ localStorage.clear();
 //// PW HANDLING///////////////////////// 
 // remove blocker
 function openUp() {
-	document.getElementById("pw").style.transition = "5s"; 
+	document.getElementById("pw").style.transition = "3s"; 
 	document.getElementById("pw").style.opacity = 0; 
 	document.getElementById("pw").style.zIndex = -9; 
 	writeLetter(); 
@@ -31,12 +31,13 @@ setTimeout(function() {
 		// check local storage
 		if (localStorage.getItem("firstVisit") === "false") {
 			let nickname = localStorage.getItem("nickname"); 
-			alert("Welcome back, " + nickname); 
+			//alert("Welcome back, " + nickname); //////////////////////////////////////////////
 			openUp(); 
 		} else {
+			const secretWord = "bakersfield"; 
 			let pw = prompt("what's the secret word?");	
 			//check pw
-			if (pw.toLowerCase() == "bakersfield"){ 
+			if (pw.toLowerCase() == secretWord){ 
 				alert("correct!"); 
 				localStorage.setItem("firstVisit", "false");
 				let nickname = prompt("pick a nickname?");	
@@ -48,7 +49,7 @@ setTimeout(function() {
 			}
 		} // local storage
 	} else { // screen size
-		alert("Uh-Oh! I detect that your screen size is too small. Please view this page on a Desktop browser. Preferably Chrome."); 
+		alert("Uh-Oh! Your screen size may be too small. Please view this page on a Desktop browser. Preferably Chrome."); 
 	}
 }, 1000);
 

@@ -5,7 +5,7 @@ joel.style.left = "50%";
 //let joel_x = 600;
 //let joel_y = 10; 
 const elli = document.getElementById("sprite-elli");
-let elli_x = 10;
+let elli_x = 20;
 let elli_y = 42; 
 
 // LEFT / RIGHT

@@ -1,6 +1,22 @@
 ////////START////////////
 
 
+//// SAVE MESSAGE ///////////////////////////////// 
+let messageFile = "";
+function saveMessage(msg, who) { 
+	let newEntry = ("\n" + who + ": " + msg);
+	messageFile += newEntry; 
+	console.log(newEntry); 
+}
+
+function printMessageFile(){ 
+	console.log(messageFile); 
+	alert("See console log for conversation"); 
+}
+
+
+
+
 //// SPEECH & BUBBLE HANDLING ///////////////////// 
 document.addEventListener("keydown", (event) => {
 	if (event.key === "ArrowDown") {
@@ -16,7 +32,8 @@ document.addEventListener("keydown", (event) => {
 	} else if (event.key === "Enter" && $("#sprite-elli-speech-textbox").val() != "") {
 		let message = $("#sprite-elli-speech-textbox").val();
 		$("#sprite-elli-speech-textbox").val("");
-		speechInterpretor(message); // INITIATE RESPONSE
+		speechInterpretor(message); // INITIATE RESPONSE 
+		saveMessage(message, "MAE"); // SAVE MESSAGE 
 	} 
 });
 
@@ -32,6 +49,7 @@ function respond(response){
 		$("#sprite-joel-speech-textbox").css("height","50px");
 		$("#sprite-joel-speech-textbox").css("display","Block"); 
 		$("#sprite-joel-speech-textbox").val(response);
+		saveMessage(response, "JFROGBOT"); // SAVE MESSAGE
 		let clearResponse = setTimeout(() => {	
 			$("#sprite-joel-speech").css("opacity","0");
 			$("#sprite-joel-speech-textbox").css("display","None");
@@ -127,7 +145,7 @@ function responseGenerator(type,message) {
 // INTERPRET SPEECH
 function speechInterpretor(msg){ 
 	let message = msg.toLowerCase();
-	let interpretation = responseGenerator("generic response",message);
+	let interpretation = responseGenerator("",message);
 
 	// interpret elli's speech 
 	if (message.includes("i") && (message.includes("love you")||message.includes("love u")||message.includes("luv you")||message.includes("luv u"))) {

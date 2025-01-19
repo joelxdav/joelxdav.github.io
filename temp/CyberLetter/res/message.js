@@ -62,9 +62,9 @@ function letter(a,l,i) {
 
 
 //// MESSAGES 
-var intro = "Hi again :) ^ There's been an update. * The ARROW keys now have a bit more functionality * Have fun ;) *";
+var intro = "Hi again :) ^ There's been an update. * Use the DOWN arrow key to have a chat. ^ You can also check the console log to reveal the full conversation. * Have fun ;) *";
 
-intro = "Willkommen, Elli! * I wanted to make you this cyber letter, ^ because I love you dearly * ...also the Canadian Post Office is actin' unsavory rn^ , so yeah, had to go the cyber route :P ^ * But I love you baby. ^ I love you so much. * I feel so blessed to have you and I can't wait to spend the rest of my life with you. ^ * Thank you for saying, \"Yes.\" ^ * Thank you for being who God made you. ^ * Take care^ , meine schatzi^ , meine liebe^ , my Elli ♡ ^ ^ * Fun Tip: ^ You can move your lil' person back and forth with the arrow keys. * Bye for now (: ^ ^ * Oh, and P.S. ^ My family loves you so much lol ^ . They always speak so fondly of you. * Okay bye fr ✌ *";
+//intro = "Willkommen, Elli! * I wanted to make you this cyber letter, ^ because I love you dearly * ...also the Canadian Post Office is actin' unsavory rn^ , so yeah, had to go the cyber route :P ^ * But I love you baby. ^ I love you so much. * I feel so blessed to have you and I can't wait to spend the rest of my life with you. ^ * Thank you for saying, \"Yes.\" ^ * Thank you for being who God made you. ^ * Take care^ , meine schatzi^ , meine liebe^ , my Elli ♡ ^ ^ * Fun Tip: ^ You can move your lil' person back and forth with the arrow keys. * Bye for now (: ^ ^ * Oh, and P.S. ^ My family loves you so much lol ^ . They always speak so fondly of you. * Okay bye fr ✌ *";
 
 var poem = "";
 
