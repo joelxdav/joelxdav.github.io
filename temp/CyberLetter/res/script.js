@@ -17,26 +17,27 @@ localStorage.clear();
 //// PW HANDLING///////////////////////// 
 // remove blocker
 function openUp() {
-	document.getElementById("pw").style.transition = "3s"; 
 	document.getElementById("pw").style.opacity = 0; 
-	document.getElementById("pw").style.zIndex = -9; 
+	document.getElementById("pw").style.zIndex = 1; 
+	document.getElementById("nothin").style.zIndex = -9; 
 	writeLetter(); 
 	sky();
 } 
 
-// enter pw
+// enter secret code
 setTimeout(function() {
 	// check screen size
-	if (document.body.clientWidth >= 750 && document.body.clientWidth >= 400) {	
-		// check local storage
+	if (document.body.clientWidth >= 750 && document.body.clientHeight >= 350) {	
+		// check local storage for user and secret code
 		if (localStorage.getItem("firstVisit") === "false") {
 			let nickname = localStorage.getItem("nickname"); 
-			//alert("Welcome back, " + nickname); //////////////////////////////////////////////
+			//alert("Welcome back, " + nickname); //////////////////////////////
+			//// OPEN UP ///////////////////////////////////////////////////////
 			openUp(); 
 		} else {
 			const secretWord = "bakersfield"; 
 			let pw = prompt("what's the secret word?");	
-			//check pw
+			//check secret code
 			if (pw.toLowerCase() == secretWord){ 
 				alert("correct!"); 
 				localStorage.setItem("firstVisit", "false");
@@ -44,12 +45,13 @@ setTimeout(function() {
 				localStorage.setItem("nickname", nickname);
 				alert("thanks, " + nickname); 
 				openUp();
-			} else { // pw
+			} else { // seceret code
 				alert("sorry incorrect. refresh the page and try again."); 
 			}
 		} // local storage
 	} else { // screen size
 		alert("Uh-Oh! Your screen size may be too small. Please view this page on a Desktop browser. Preferably Chrome."); 
+		document.getElementById("nothin").style.opacity = 1; 
 	}
 }, 1000);
 
@@ -99,7 +101,7 @@ function moments() {
 	}
 	setTimeout(moments, 500); 
 }
-setTimeout(moments, 10); 
+setTimeout(moments, 250); 
 
 
 

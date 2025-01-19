@@ -1,5 +1,4 @@
 
-@import url(http://fonts.googleapis.com/css?family=Raleway:200,300,400,500,700,800);
 iframe {display:none;} 
 
 body {
@@ -26,8 +25,21 @@ body {
 	left:-10vw;
 	bottom:-10vh; 
 	z-index:99999; /* make positive number before deployment */
-	/*transition: 5s;*/
+	transition:3s;
 }
+#nothin {
+	opacity: 0;
+	position: relative;
+	z-index:199999;
+	transition:5s;
+	}
+#nothin img {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	width: 50%;
+	}
+
 
 #sky {
 	background: linear-gradient(180deg, #6699FF, #F0E79F, #FF6666, #660066, #000033, #000033, #000066, #0066CC, #FFCCFF);
@@ -39,6 +51,7 @@ body {
 	-webkit-animation-timing-function: linear;
 	animation-timing-function: linear;
 	}	
+
 
 .gif {
 	background:transparent; 

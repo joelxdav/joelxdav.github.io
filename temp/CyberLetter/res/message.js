@@ -62,7 +62,7 @@ function letter(a,l,i) {
 
 
 //// MESSAGES 
-var intro = "Hi again :) ^ There's been an update. * Use the DOWN arrow key to have a chat. ^ You can also check the console log to reveal the full conversation. * Have fun ;) *";
+var intro = "Hi again :) ^ There's been an update. * Use the DOWN arrow key to have a chat. ^ Yep. * You can also check the console log to reveal the full conversation. ^ (Just press the keyboard shortcut: Command + Option + J) ^ * Have fun ;) *";
 
 var poem = "";
 

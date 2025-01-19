@@ -87,6 +87,14 @@ function responseGenerator(type,message) {
 				"Hallo!"
 			]; 
 		break;
+		case "BYE": 
+			responseArray = [
+  				"Bye bye",
+				"awh..", 
+				"Wait!", 
+				"See ya 'round!"
+			]; 
+		break;
 		case "QUESTION": 
 			responseArray = [
 				"idk",
@@ -153,6 +161,9 @@ function speechInterpretor(msg){
 		}
 	if (message=="hi"||message.includes("hey")||message.includes("hello")||message.includes("hallo")) {
 		interpretation = responseGenerator("HELLO",message); 
+		}
+	if (message=="bye"||message.includes("see you later")||message.includes("see ya later")) {
+		interpretation = responseGenerator("BYE",message); 
 		}
 	if (message.includes("?")||message.includes("how")||message.includes("what")||message.includes("where")||message.includes("when")||message.includes("who")||message.includes("why")) {
 		interpretation = responseGenerator("QUESTION",message); 
