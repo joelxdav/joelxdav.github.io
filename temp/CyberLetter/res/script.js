@@ -17,6 +17,7 @@ localStorage.clear();
 //// PW HANDLING///////////////////////// 
 // remove blocker
 function openUp() {
+	document.getElementById("pw").style.transition = "3s"; 
 	document.getElementById("pw").style.opacity = 0; 
 	document.getElementById("pw").style.zIndex = 1; 
 	document.getElementById("nothin").style.zIndex = -9; 

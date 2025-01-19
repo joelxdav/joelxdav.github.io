@@ -25,7 +25,6 @@ body {
 	left:-10vw;
 	bottom:-10vh; 
 	z-index:99999; /* make positive number before deployment */
-	transition:3s;
 }
 #nothin {
 	opacity: 0;
