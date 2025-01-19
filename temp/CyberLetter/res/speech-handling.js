@@ -131,7 +131,8 @@ function responseGenerator(topic,message) {
 				"if its a weekday afternoon, im working", 
 				"on my faith journey", 
 				"sojourning", 
-				"being excited to be married" 
+				"being excited to be married", 
+				"wanna talk about somn else?" 
 			]; 
 		break;
 		case "MOTORCYCLES": 
@@ -141,7 +142,8 @@ function responseGenerator(topic,message) {
 				"if i could do it over...maybe i woulda kept em. definitely until you got to see them in person /:", 
 				"i named one Odessa.. well it used to be Goldie like my dad's muscle car. But then i changed the panels to black",  
 				"your support of my motorcycles meant so much to me", 
-				"still surreal i had two motorcycles" 
+				"still surreal i had two motorcycles", 
+				"you board yet?" 
 			]; 
 		break;
 		case "MUSIC": 
@@ -149,7 +151,25 @@ function responseGenerator(topic,message) {
 				"vibes baby, vibes", 
 				"i love finding new music that hits tha feels", 
 				"sharing music feels good when the other person vibes with it",
-				"ya gotta check out my Spotify" 
+				"ya gotta check out my Spotify", 
+				"what kinda music u like?", 
+				"what's a good song rn?", 
+				"peep the top-right screen. there's a music icon now", 
+				"we could change the topic if u want. ask me somn else"
+			]; 
+		break;
+		case "ART": 
+			responseArray = [
+				"i used to draw a lot",
+				"in HS i took an art class",
+				"i have German crayons! (:",
+				"what do you like to paint?",
+				"art. cool.",
+				"u amaze me", 
+				"do u like Van Gogh? i do. sad he died poor tho", 
+				"show me ur art somtime (:", 
+				"water colors are tougher than acryllics", 
+				"i hope im not boring you. what else can we talk about?" 
 			]; 
 		break;
 		default: 
@@ -157,22 +177,23 @@ function responseGenerator(topic,message) {
 				"*shrugs*",
 				"Wilkommen!", 
 				"i'm glad you're here", 
-				"Fun Fact: ...heh idk", 
+				"Fun Fact: ...heh idk",
+				"wanna hear some cool tunes, check out my Spotify", 
 				"?", 
 				"life is good (:", 
 				"how are ya?", 
 				"noice", 
 				"ok", 
+				"i miss my motorcycles tbh", 
 				"back at ya", 
 				"i can't say much" , 
 				"i wish i could say more", 
 				"i probably miss you rn", 
-				"wanna hear some cool tunes, check out my Spotify", 
-				"i miss my motorcycles tbh" 
+				"what you up to?" 
 			]; 
 	}
 
-	const i = Math.floor(Math.random() * responseArray.length);
+	let i = Math.floor(Math.random() * responseArray.length);
 	let response = responseArray[i]; 
 	return response;
 }
@@ -227,6 +248,10 @@ function speechInterpretor(msg){
 		interpretation = responseGenerator("MUSIC",message); 
 		localStorage.setItem("TOPIC", "MUSIC");
 		showSpotifyLink();
+		} 
+	if (message.includes("art")||message.includes("painting")||message.includes("water colors")||message.includes("water colours")) {
+		interpretation = responseGenerator("ART",message); 
+		localStorage.setItem("TOPIC", "ART");
 		} 
 
 	// call the generator for a response
