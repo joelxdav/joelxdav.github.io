@@ -1,6 +1,6 @@
 ////////START////////////
 
-//// PW STORAGE TIPS /////////////////////////
+//// LOCAL STORAGE TIPS /////////////////////////
 /*
 // Store a value
 localStorage.setItem("firstVisit", "true");
@@ -33,7 +33,7 @@ function openUp() {
 		localStorage.setItem("VERSION", LATEST_VERSION);
 		localStorage.setItem("PLAY_COUNT", play_count+1);
 	} 
-	sky();
+	sky(); // background is now based on time of day
 } 
 
 // enter secret code
@@ -70,23 +70,57 @@ setTimeout(function() {
 
 
 		
-//// SKY MOVEMENT /////////////////// 
+//// SKY BACKGROUND - TIME OF DAY ////////////
 function sky() {
+	/*
 	var h = 0 - $("#sky").height();
 	var sh = $(window).height();
 	var m = (h+sh) + "px";
 	$("#sky").animate({top: m}, 100000);
+	*/
+	const today = new Date();	
+	let hour = today.getHours();
+
+	if (hour >= 21 && hour <= 23) { 
+		$('#sky').css({'top': '-8400px'});
+		$("#moon-stars").animate({opacity: "1"}, 5000); 
+	} else if (hour == 20) {
+		$('#sky').css({'top': '-8000px'}); 
+	} else if (hour == 19) {
+		$('#sky').css({'top': '-7000px'}); 
+	} else if (hour == 18) {
+		$('#sky').css({'top': '-6000px'}); 
+	} else if (hour == 17) {
+		$('#sky').css({'top': '-5300px'}); 
+	} else if (hour == 16) {
+		$('#sky').css({'top': '-4800px'}); 
+	} else if (hour >= 12 && hour <= 15) {
+		$('#sky').css({'top': '-4300px'}); 
+	} else if (hour >= 8 && hour <= 11) {
+		$('#sky').css({'top': '-3300px'}); 
+	} else if (hour >= 5 && hour <= 7) {
+		$('#sky').css({'top': '-1500px'}); 
+	} else if (hour == 4) {
+		$('#sky').css({'top': '-750px'}); 
+		$("#moon-stars").animate({opacity: "1"}, 5000); 
+	} else if (hour >= 0 && hour <= 3) {
+		$('#sky').css({'top': '-100px'}); 
+		$("#moon-stars").animate({opacity: "1"}, 5000); 
+	} 
+
+	setTimeout(sky, 900000); // check every 15 minutes  
 }
 
 
 
 //// MOON & STARS GIF /////////////////
+/*
 setTimeout(function(){
 	$("#moon-stars").animate({opacity: "1"}, 5000); 
 	//$("body").append('<div id="link"><a href="http://dimensionalhearts.tumblr.com/ask">ask me anything</a>&nbsp;&nbsp;<a href="https://open.spotify.com/user/jedpro/playlist/4Whcut8UOi5Y2VR95D1KRB">listen to a playlist</a></div>'); 
 	//$("#link").animate({opacity: "1"}, 5000); 	
 }, 55000); 
-
+*/
 
 
 
@@ -115,207 +149,3 @@ function moments() {
 }
 setTimeout(moments, 250); 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*
-var sc=0;
-$("#spotify").click(function(){
-window.location.assign("https://open.spotify.com/user/jedpro/playlist/4Whcut8UOi5Y2VR95D1KRB");
-});
-$("#script").click(function(){
-window.location.assign("http://cyberletter.tumblr.com/seasons-script");
-});
-$("#music").click(function(){
-if (sc==0) {
-	$("#soundCloud").css("display", "block");
-	$("#soundCloud").animate({bottom: "0px"}, 750);
-	$("#soundCloud").focus();
-	sc=1;
-} else {
-	$("#soundCloud").animate({bottom: "-300px"}, 750);
-	$("#soundCloud").blur();
-	sc=0;
-}
-});
-$("#soundCloud").blur(function(){
-$("#soundCloud").animate({bottom: "-300px"}, 750);
-sc=0;
-});
-var soundcloud_src = "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/510719238&color=%23f3d9dc&auto_play=true&hide_related=true&show_comments=false&show_user=false&show_reposts=false&show_teaser=false";
-
-
-//// BACKGROUND ///////////////////
-var h = 0 - $("#sky").height();
-var sh = $(window).height();
-var m = (h+sh) + "px";
-
-//$("#sky").css("position", "fixed");
-$("#sky").animate({top: m}, 100000);
-
-
-
-
-
-
-
-//// LETTER /////////////////////
-var rite; //= setInterval(function(){ var o=null }, 9999); 
-//clearInterval(rite);
-
-// letter(string, string length, conditional)
-function letter(a,l,i) { 
-function wrt() {
-	if (i < l) {
-		var b = a.substr(0,1);
-		
-
-		// Astricks : pause for 3 seconds, then clear block
-		if (b=="*") {
-			clearInterval(rite);
-			b="";
-			a = a.slice(1,a.length);
-			setTimeout(function(){
-				$("#x").animate({opacity: "0"}, 500);
-				setTimeout(function(){ document.getElementById("x").innerHTML=""}, 510);
-				setTimeout(function(){ rite = setInterval(function(){ wrt() }, 25); }, 520);
-			}, 3000 );
-		} 
-	
-		// Hat : pause for 1.5 seconds
-		if (b=="^") {
-			clearInterval(rite);
-			b="";
-			a = a.slice(1,a.length);
-			setTimeout(function(){
-				setTimeout(function(){ rite = setInterval(function(){ wrt() }, 25); }, 500);
-			}, 1500 );
-		}
-		
-		
-		
-	// WRITE //
-		$("#x").css("opacity", "1");
-		document.getElementById("x").innerHTML += b;
-		a = a.slice(1,a.length);
-		i++;   
-	///////////
-		
-				
-	} 
-/*		else {
-		clearInterval(rite);
-		setTimeout(function(){
-			$("#x").animate({opacity: "0"}, 500);
-			setTimeout(function(){document.getElementById("x").innerHTML=""}, 510);
-		}, (l*50) );
-	}
-*/
-/*
-}
-rite = setInterval(function(){ wrt() }, 25);
-}
-
-
-
-///// ONLOAD /////////////////////////////////////////////////////////////////////////////
-$(document).ready(function(){
-
-
-
-//// WALKING CROWD ////////////////////////////////
-var walking;
-var n = 1;
-function walk() {
-	$("#walker").css("right", "33vw");
-	$("#walker").attr("src", "walking-"+n+".gif");
-	$("#walker").animate({right: "7vw"}, 5000);
-	n++;
-	if (n==14) { 
-		n=1;
-		//clearInterval(walking); 
-		//$("#walker").remove();
-	}
-}
-
-
-
-setTimeout(function() {
-	$("#ending").animate({opacity: "1"}, 5000); 
-	$("#link").animate({opacity: "1"}, 5000); 
-}, 95000);
-
-				
-setTimeout(function() {
-		$("#crowd").animate({opacity: "0.5"}, 4000);
-		$("#soundCloud").attr("src", soundcloud_src);
-}, 5000);
-
-
-setTimeout(function(){ 
-	walking = setInterval(walk, 6000);			
-}, 18000);
-
-
-
-
-
-
-//// TIMING FOR WRITING LETTERS ///////////////////
-
-$(".portrait").hover(function(){
-
-	clearInterval(rite);
-	
-	$("#x").html("");
-	
-	var description = this.title;
-	
-	letter(description, description.length, 0); 
-	
-});
-
-
-
-
-
-setTimeout(function(){
-	letter(msg, msg.length, 0); 	
-}, 5000);
-
-
-});
-*/

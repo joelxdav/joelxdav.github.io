@@ -1,7 +1,7 @@
 
 iframe {display:none;} 
 
-body {
+body {	
 	background-color: #3b336e; 
 	position:fixed; 
 	min-width:100vw;
@@ -14,6 +14,7 @@ body {
 	padding:0px; 
 	margin:0px;
 	overflow:hidden;
+	transition: 0s;
 	}
 #pw {
 	background-color: #3b336e; /* 0f4733 */
@@ -42,14 +43,15 @@ body {
 
 
 #sky {
-	background: linear-gradient(180deg, #6699FF, #F0E79F, #FF6666, #660066, #000033, #000033, #000066, #0066CC, #FFCCFF);
+	opacity:1;
+	background: linear-gradient(180deg, #000033, #000066, #0066CC, #FFCCFF, #6699FF, #6699FF, #6699FF, #F0E79F, #FF6666, #660066, #000033, #000033);
 	min-width:100%;
 	min-height:1000vh;
 	position:fixed;
 	top:-10px;
 	z-index:-2;
 	-webkit-animation-timing-function: linear;
-	animation-timing-function: linear;
+	animation-timing-function: linear;	
 	}	
 
 
@@ -145,6 +147,7 @@ body {
 	left:55%; 
 	bottom:40px; 
 	cursor:default; 
+	z-index:9998;
 	}
 #sprite-joel-speech { /*bubble*/
 	opacity:0;

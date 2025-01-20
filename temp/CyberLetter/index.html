@@ -48,6 +48,7 @@
 	<script src="res/speech-handling.js"></script>
 	<script src="res/sprite-movement.js"></script> 
 	<script>
+		//// CLOCK //////////////////////////////
 		function startTime() {
 			const today = new Date();
 			let h = today.getHours();
@@ -58,13 +59,14 @@
 			let s = today.getSeconds(); 
 			m = checkTime(m); 
 			s = checkTime(s); 
-			document.getElementById('clock').innerHTML =  h + ":" + m + ":"+s+" " + ampm; 
-			setTimeout(startTime, 1000); 
+			document.getElementById('clock').innerHTML =  h + ":" + m + " " + ampm; 
+			setTimeout(startTime, 60000);  
 		}
 		function checkTime(i) {
-		if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+		if (i < 10) {i = "0" + i};  // add zero in front of minutes and seconds < 10
 		return i;
 		}
+
 	</script>
 </body>
 </html>
