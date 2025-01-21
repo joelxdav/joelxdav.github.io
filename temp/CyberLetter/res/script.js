@@ -71,6 +71,7 @@ setTimeout(function() {
 
 		
 //// SKY BACKGROUND - TIME OF DAY ////////////
+let skyRunCount = 0;
 function sky() {
 	/*
 	var h = 0 - $("#sky").height();
@@ -78,6 +79,11 @@ function sky() {
 	var m = (h+sh) + "px";
 	$("#sky").animate({top: m}, 100000);
 	*/
+	if (skyRunCount == 0) {
+		skyRunCount++; 
+	} else if (skyRunCount == 1) {
+		$('#sky').css({'transition': '5s'});
+	}
 	const today = new Date();	
 	let hour = today.getHours();
 
@@ -108,7 +114,7 @@ function sky() {
 		$("#moon-stars").animate({opacity: "1"}, 5000); 
 	} 
 
-	setTimeout(sky, 900000); // check every 15 minutes  
+	setTimeout(sky, 300000); // check every 5 minutes 
 }
 
 

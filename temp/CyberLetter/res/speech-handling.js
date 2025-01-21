@@ -16,6 +16,7 @@ function printMessageFile(){
 }
 
 
+let clearResponse;
 
 
 //// SPEECH & BUBBLE HANDLING ///////////////////// 
@@ -35,27 +36,43 @@ document.addEventListener("keydown", (event) => {
 		$("#sprite-elli-speech-textbox").val("");
 		speechInterpretor(message); // INITIATE RESPONSE 
 		saveMessage(message, "MAE"); // SAVE MESSAGE 
+		clearTimeout(clearResponse); 
 	} 
 });
-
 
 
 
 // OUTPUT THE RESPONSE
 function respond(response){ 
 	setTimeout(function(){	
-		//clearTimeout(clearResponse); 
+		let textLength = response.length; 
+		if (textLength >=30) { 
+			let textWidth = (textLength*4); 
+			//let textHeight = 125; 
+			let bubbleWidth = (textLength*4)+50; 
+			//let bubbleHeight = 150; 
+			$("#sprite-joel-speech-textbox").css("padding-left","20px");
+			$("#sprite-joel-speech-textbox").css("width",textWidth+"px");
+			//$("#sprite-joel-speech-textbox").css("height",textHeight+"px");
+			$("#sprite-joel-speech").css("width",bubbleWidth+"px");
+			//$("#sprite-joel-speech").css("height",bubbleHeight+"px");
+		} else {
+			$("#sprite-joel-speech-textbox").css("padding-left","10px");
+			$("#sprite-joel-speech-textbox").css("width","125px");
+			//$("#sprite-joel-speech-textbox").css("height","50px");
+			$("#sprite-joel-speech").css("width","150px");
+			//$("#sprite-joel-speech").css("height","100px");
+		}
 		$("#sprite-joel-speech").css("opacity","1");
-		$("#sprite-joel-speech-textbox").css("width","125px");
-		$("#sprite-joel-speech-textbox").css("height","50px");
-		$("#sprite-joel-speech-textbox").css("display","Block"); 
+		$("#sprite-joel-speech-textbox").css("display","Block");
 		$("#sprite-joel-speech-textbox").val(response);
 		saveMessage(response, "JFROG BOT"); // SAVE MESSAGE
-		let clearResponse = setTimeout(() => {	
+		
+		clearResponse = setTimeout(() => {	
 			$("#sprite-joel-speech").css("opacity","0");
 			$("#sprite-joel-speech-textbox").css("display","None");
 			$("#sprite-joel-speech-textbox").val("");
-		}, 5000); 
+		}, 7000); 
 	}, 500); 
 }
 
@@ -77,7 +94,8 @@ function responseGenerator(topic,message) {
 				"awh.. danke meine liebe",
 				"oof", 
 				"i love you too", 
-				"i love you more"
+				"i love you more", 
+				"Explain." 
 			]; 
 		break;
 		case "HELLO": 
@@ -98,18 +116,24 @@ function responseGenerator(topic,message) {
 		break;
 		case "QUESTION": 
 			responseArray = [
-				"idk",
-				"*shrugs*",
+				"im not that learn-ed yet", 
+				"idk", 
+				"sorry, what?", 
+				"*shrugs*", 
+				"what does that mean?", 
 				"good question. idk tho", 
 				"how should i know", 
-				"i wish i could answer that"
+				"i wish i could answer that", 
+				"you ask a lot of questions, huh", 
+				"im a BOT. i don't really know. sry /:" 
 			]; 
 		break;
 		case "EXCLAIM": 
 			responseArray = [
 				"woah",
 				"lol relax", 
-				"heh...yehh"
+				"heh...yehh", 
+				"you seem excited"
 			]; 
 		break;
 		case "MISS": 
@@ -127,22 +151,25 @@ function responseGenerator(topic,message) {
 				"tryna build Rome in a day", 
 				"thinking about you", 
 				"stressin bout somn", 
-				"idk", 
+				"you should text me and find out...tell me JFROG BOT sent you", 
 				"if its a weekday afternoon, im working", 
 				"on my faith journey", 
 				"sojourning", 
-				"being excited to be married", 
+				"being excited about the future", 
 				"wanna talk about somn else?" 
 			]; 
 		break;
 		case "MOTORCYCLES": 
 			responseArray = [
-				"THEY WERE SO COOL", 
-				"well they were a lot of work.. but also rewarding", 
-				"if i could do it over...maybe i woulda kept em. definitely until you got to see them in person /:", 
-				"i named one Odessa.. well it used to be Goldie like my dad's muscle car. But then i changed the panels to black",  
-				"your support of my motorcycles meant so much to me", 
-				"still surreal i had two motorcycles", 
+				"your support meant so so much to me", 
+				"still crazy i had 2 motorcycles", 
+				"my bikes were cool huh", 
+				"enough about my motorcycles, im in love with u", 
+				"well the bikes were a lot of work, but also rewarding", 
+				"if i could do it over.. i woulda kept em until you got to see them in person /:", 
+				"i named one Odessa.. well it used to be Goldie like my dad's old car. But then i changed the panels to black, so yeah",  
+				"i've searched a lot for a new bike to get...no picks yet", 
+				"i'd give motorcycles up for you any day", 
 				"you board yet?" 
 			]; 
 		break;
@@ -174,20 +201,20 @@ function responseGenerator(topic,message) {
 		break;
 		default: 
 			responseArray = [
-				"*shrugs*",
-				"Wilkommen!", 
-				"i'm glad you're here", 
-				"Fun Fact: ...heh idk",
 				"wanna hear some cool tunes, check out my Spotify", 
+				"i'm glad you're here", 
 				"?", 
 				"life is good (:", 
 				"how are ya?", 
 				"noice", 
 				"ok", 
-				"i miss my motorcycles tbh", 
-				"back at ya", 
 				"i can't say much" , 
 				"i wish i could say more", 
+				"same", 
+				"im still learning how to talk better.. ich lerne", 
+				"\"" + message + "\"??",
+				"i miss my motorcycles tbh", 
+				"back at ya", 
 				"i probably miss you rn", 
 				"what you up to?" 
 			]; 
@@ -240,7 +267,7 @@ function speechInterpretor(msg){
 		interpretation = responseGenerator("WHATYOUDOING",message); 
 		localStorage.setItem("TOPIC", "WHATYOUDOING");
 		} 
-	if (message.includes("your motorcycle")||message.includes("your bikes")) {
+	if (message.includes("your motorcycle")||message.includes("motorcycle")||message.includes("your bikes")) {
 		interpretation = responseGenerator("MOTORCYCLES",message); 
 		localStorage.setItem("TOPIC", "MOTORCYCLES");
 		} 
@@ -259,6 +286,8 @@ function speechInterpretor(msg){
 } 
 
 
+
+//// SHOW MUSIC ICON with SPOTIFY LINK ////////////
 function showSpotifyLink() {
 	const music = document.getElementById("music");
 	music.style.opacity = 1;
