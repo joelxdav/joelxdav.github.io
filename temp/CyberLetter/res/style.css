@@ -50,6 +50,7 @@ body {
 	position:fixed;
 	top:-10px;
 	z-index:-2;
+	transition:15s;
 	-webkit-animation-timing-function: linear;
 	animation-timing-function: linear;	
 	}	
