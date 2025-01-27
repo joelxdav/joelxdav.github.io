@@ -76,6 +76,7 @@ body {
 	cursor:help;
 	transition:0.3s; 
 	}
+#mycomputer { cursor:pointer; }
 #folder { top:80px; }
 #music { 
 	opacity: 0;

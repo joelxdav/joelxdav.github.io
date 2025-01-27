@@ -1,26 +1,40 @@
 ////////START////////////
 
+const USER = "MAE"; 
+const BOT = "JFROG BOT"; 
+let clearResponse; 
 
 //// SAVE MESSAGE ///////////////////////////////// 
-let messageFile = ""; 
+let messageFile = {
+	user: [], 
+	bot: [], 
+	print: function(){ 
+		for (let i=0; i < this.user.length; i++) {
+			console.log(USER + ": " + this.user[i]);
+			console.log(BOT + ": " + this.bot[i]);
+		}
+	}
+}; 
 console.log("To save this console log to a file, right-click on any whitespace and select \"Save as...\""); 
 function saveMessage(msg, who) { 
 	let newEntry = ("\n" + who + ": " + msg);
-	messageFile += newEntry; 
 	console.log(newEntry); 
+	
+	switch(who) {
+		case "MAE": 
+			messageFile.user.push(msg);
+		break;
+		case "JFROG BOT": 
+			messageFile.bot.push(msg); 
+		break;
+	}
 }
 
-function printMessageFile(){ 
-	console.log(messageFile); 
-	alert("See console log for conversation"); 
-}
 
 
-let clearResponse;
 
-
-//// SPEECH & BUBBLE HANDLING ///////////////////// 
-document.addEventListener("keydown", (event) => {
+//// INPUT SPEECH & BUBBLE HANDLING ///////////////////// 
+document.addEventListener("keyup", (event) => {
 	if (event.key === "ArrowDown") {
 		$("#sprite-elli-speech").css("opacity","1");
 		$("#sprite-elli-speech-textbox").css("width","125px");
@@ -33,10 +47,10 @@ document.addEventListener("keydown", (event) => {
 		$("#sprite-elli-speech-textbox").val("");
 	} else if (event.key === "Enter" && $("#sprite-elli-speech-textbox").val() != "") {
 		let message = $("#sprite-elli-speech-textbox").val();
-		$("#sprite-elli-speech-textbox").val("");
 		speechInterpretor(message); // INITIATE RESPONSE 
-		saveMessage(message, "MAE"); // SAVE MESSAGE 
+		saveMessage(message, USER); // SAVE MESSAGE 
 		clearTimeout(clearResponse); 
+		$("#sprite-elli-speech-textbox").val("");
 	} 
 });
 
@@ -65,9 +79,20 @@ function respond(response){
 		}
 		$("#sprite-joel-speech").css("opacity","1");
 		$("#sprite-joel-speech-textbox").css("display","Block");
-		$("#sprite-joel-speech-textbox").val(response);
-		saveMessage(response, "JFROG BOT"); // SAVE MESSAGE
+		$("#sprite-joel-speech-textbox").val(response); // OUTPUT MESSAGE 
 		
+		//// RESPONSE PERIPHIALS //////////////////////////
+		saveMessage(response, BOT); // SAVE MESSAGE 
+		switch(localStorage.getItem("TOPIC")) {
+			case "MOTORCYCLES": 
+				$("#sprite-joel").attr("src","res/images/sprites/joel-motorbike.gif");
+			break;
+			default: 
+				$("#sprite-joel").attr("src","res/images/sprites/sprite-joel-left.gif");
+			break;
+		}
+		////////////////////////////////////////////////////
+
 		clearResponse = setTimeout(() => {	
 			$("#sprite-joel-speech").css("opacity","0");
 			$("#sprite-joel-speech-textbox").css("display","None");
@@ -126,6 +151,16 @@ function responseGenerator(topic,message) {
 				"i wish i could answer that", 
 				"you ask a lot of questions, huh", 
 				"im a BOT. i don't really know. sry /:" 
+			]; 
+		break;
+		case "YES_NO_QUESTION": 
+			responseArray = [
+				"no", 
+				"Nein.", 
+				"yes", 
+				"mhm", 
+				"Ja.", 
+				"i wish" 
 			]; 
 		break;
 		case "EXCLAIM": 
@@ -212,7 +247,7 @@ function responseGenerator(topic,message) {
 				"i wish i could say more", 
 				"same", 
 				"im still learning how to talk better.. ich lerne", 
-				"\"" + message + "\"??",
+				"u said '" + message + "' ??",
 				"i miss my motorcycles tbh", 
 				"back at ya", 
 				"i probably miss you rn", 
@@ -226,8 +261,14 @@ function responseGenerator(topic,message) {
 }
 
 
+/*
 
+nlp model should determine if response should be:
+[command,statement,question]	
+[proactive,reactive]
+[{topics}]
 
+*/
 
 
 
@@ -239,46 +280,52 @@ function speechInterpretor(msg){
 	let interpretation = responseGenerator(topic,message);
 
 	// interpret elli's speech 
-	if (message=="hi"||message.includes("hey")||message.includes("hello")||message.includes("hallo")) {
-		interpretation = responseGenerator("HELLO",message); 
-		localStorage.removeItem("TOPIC");
-		}
-	if (message=="bye"||message.includes("see you later")||message.includes("see ya later")) {
-		interpretation = responseGenerator("BYE",message); 
-		localStorage.removeItem("TOPIC");
-		}
-	if (message.includes("?")||message.includes("how")||message.includes("what")||message.includes("where")||message.includes("when")||message.includes("who")||message.includes("why")) {
-		interpretation = responseGenerator("QUESTION",message); 
-		localStorage.removeItem("TOPIC");
-		} 
-	if (message.includes("!!")||message.includes("crazy")) {
-		interpretation = responseGenerator("EXCLAIM",message); 
-		localStorage.removeItem("TOPIC");
-		}
-	if (message.includes("i miss you")||message.includes("i miss u")) {
-		interpretation = responseGenerator("MISS",message); 
-		localStorage.removeItem("TOPIC");
-		}
-	if (message.includes("i") && (message.includes("love you")||message.includes("love u")||message.includes("luv you")||message.includes("luv u"))) {
-		interpretation = responseGenerator("LOVE",message); 
-		localStorage.removeItem("TOPIC");
-		}
-	if (message.includes("what are you doin")||message.includes("what are you up to")||message.includes("what you up to")||message.includes("what ya doin")||message.includes("what ya up to")) {
-		interpretation = responseGenerator("WHATYOUDOING",message); 
-		localStorage.setItem("TOPIC", "WHATYOUDOING");
-		} 
-	if (message.includes("your motorcycle")||message.includes("motorcycle")||message.includes("your bikes")) {
+	if (message.split(" ")[0] == "did"||message.split(" ")[0] == "are"||message.split(" ")[0] == "will"||message.split(" ")[0] == "can") {
+		interpretation = responseGenerator("YES_NO_QUESTION",message); 
+		//localStorage.removeItem("TOPIC");
+		} else
+	if (message.includes("motorcycle")||message.includes("motorbike")||message.includes("your bikes")) {
 		interpretation = responseGenerator("MOTORCYCLES",message); 
 		localStorage.setItem("TOPIC", "MOTORCYCLES");
-		} 
+		} else
 	if (message.includes("music")||message.includes("songs")||message.includes("spotify")) {
 		interpretation = responseGenerator("MUSIC",message); 
 		localStorage.setItem("TOPIC", "MUSIC");
 		showSpotifyLink();
-		} 
+		} else
 	if (message.includes("art")||message.includes("painting")||message.includes("water colors")||message.includes("water colours")) {
 		interpretation = responseGenerator("ART",message); 
 		localStorage.setItem("TOPIC", "ART");
+		} else
+	
+	if (message.includes("?")||message.includes("how")||message.includes("what")||message.includes("where")||message.includes("when")||message.includes("who")||message.includes("why")) {
+		interpretation = responseGenerator("QUESTION",message); 
+		localStorage.removeItem("TOPIC");
+		} else
+	if (message.includes("what are you doin")||message.includes("what are you up to")||message.includes("what you up to")||message.includes("what ya doin")||message.includes("what ya up to")) {
+		interpretation = responseGenerator("WHATYOUDOING",message); 
+		localStorage.setItem("TOPIC", "WHATYOUDOING");
+		} else
+	
+		if (message=="hi"||message.includes("hey")||message.includes("hello")||message.includes("hallo")) {
+		interpretation = responseGenerator("HELLO",message); 
+		localStorage.removeItem("TOPIC");
+		} else
+	if (message=="bye"||message.includes("see you later")||message.includes("see ya later")) {
+		interpretation = responseGenerator("BYE",message); 
+		localStorage.removeItem("TOPIC");
+		} else 
+	if (message.includes("!!")||message.includes("crazy")) {
+		interpretation = responseGenerator("EXCLAIM",message); 
+		localStorage.removeItem("TOPIC");
+		} else
+	if (message.includes("i miss you")||message.includes("i miss u")) {
+		interpretation = responseGenerator("MISS",message); 
+		localStorage.removeItem("TOPIC");
+		} else
+	if (message.includes("i") && (message.includes("love you")||message.includes("love u")||message.includes("luv you")||message.includes("luv u"))) {
+		interpretation = responseGenerator("LOVE",message); 
+		localStorage.removeItem("TOPIC");
 		} 
 
 	// call the generator for a response
